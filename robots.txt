@@ -1,0 +1,21 @@
+# Robots.txt for shithin.com
+User-agent: *
+Allow: /
+
+# Directives for AI & Search Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+Sitemap: https://shithin.com/sitemap.xml
