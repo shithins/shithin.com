@@ -3,29 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shithin Ram — SEO Consultant, Developer &amp; Filmmaker</title>
-  <meta name="description" content="Personal website of an SEO consultant, web developer, and filmmaker based in Kerala. Building lightweight software tools and visual stories.">
-  <meta name="keywords" content="SEO Expert in Kerala, SEO Consultant, Best SEO Expert in Kerala, Website developer, SEO-friendly web developer, Ekalavyan Studios, Malayalam cinema">
+  <title>ShithinOS '98 — Shithin Ram (Product Builder, SEO Specialist &amp; Co-Founder @ TheBlackit)</title>
+  <meta name="description" content="Vintage Operating System portfolio of Shithin Ram — Product Builder, SEO Specialist, and Co-Founder of TheBlackit.">
+  <meta name="keywords" content="SEO Specialist, Web Developer, Entrepreneur, Product Builder, TheBlackit, Keeptime, Clockroach, Kerala">
   <meta name="author" content="Shithin Ram S">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  
-  <!-- Canonical & Social Meta -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://shithin.com/">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Shithin Ram — SEO Consultant, Developer &amp; Filmmaker">
-  <meta property="og:description" content="Personal website of an SEO consultant, web developer, and filmmaker based in Kerala. Building lightweight software tools and visual stories.">
+  <meta property="og:title" content="ShithinOS '98 — Shithin Ram (Product Builder, SEO Specialist &amp; Co-Founder @ TheBlackit)">
+  <meta property="og:description" content="Vintage Operating System portfolio of Shithin Ram — Product Builder, SEO Specialist, and Co-Founder of TheBlackit.">
   <meta property="og:url" content="https://shithin.com/">
   <meta property="og:site_name" content="Shithin Ram">
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Shithin Ram — SEO Consultant, Developer &amp; Filmmaker">
-  <meta name="twitter:description" content="Personal website of an SEO consultant, web developer, and filmmaker based in Kerala. Building lightweight software tools and visual stories.">
-  
+  <!-- TODO before launch: og:image / twitter:image 1200x630 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ShithinOS '98 — Shithin Ram (Product Builder, SEO Specialist &amp; Co-Founder @ TheBlackit)">
+  <meta name="twitter:description" content="Vintage Operating System portfolio of Shithin Ram — Product Builder, SEO Specialist, and Co-Founder of TheBlackit.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -34,298 +28,2339 @@
         "@type": "Person",
         "@id": "https://shithin.com/#person",
         "name": "Shithin Ram",
-        "jobTitle": "SEO Consultant, Web Developer & Filmmaker",
-        "description": "SEO consultant, developer, actor, and director based in Kerala. Directing SEO strategy at Acodez and creating films at Ekalavyan Studios.",
+        "jobTitle": "Product Builder, SEO Specialist & Co-Founder",
+        "description": "Product builder and technical SEO specialist based in Kozhikode, Kerala. SEO Team Lead at Acodez IT Solutions and co-founder of theblackit.",
         "url": "https://shithin.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Kozhikode",
-          "addressRegion": "Kerala",
-          "addressCountry": "India"
-        },
+        "email": "shithinrams2001@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Kozhikode", "addressRegion": "Kerala", "addressCountry": "India" },
+        "worksFor": { "@type": "Organization", "name": "Acodez IT Solutions", "url": "https://acodez.in" },
+        "founderOf": { "@id": "https://theblackit.com/#org" },
         "sameAs": [
-          "https://www.youtube.com/@EkalavyansStudio",
+          "https://theblackit.com",
           "https://github.com/shithins/",
           "https://www.linkedin.com/in/shithin-ram-158327246/"
         ],
-        "knowsAbout": [
-          "Search Engine Optimization",
-          "Technical SEO",
-          "Web Development",
-          "Chrome Extensions",
-          "Film Direction",
-          "Screenwriting",
-          "Film Criticism"
-        ]
+        "knowsAbout": ["Search Engine Optimization", "Technical SEO", "Core Web Vitals", "Generative Engine Optimization", "Web Development", "Chrome Extension Development", "Product Management"]
       },
       {
-        "@type": "WebSite",
-        "@id": "https://shithin.com/#website",
-        "url": "https://shithin.com",
-        "name": "Shithin Ram",
-        "publisher": {
-          "@id": "https://shithin.com/#person"
-        }
-      }
+        "@type": "Organization",
+        "@id": "https://theblackit.com/#org",
+        "name": "theblackit",
+        "url": "https://theblackit.com",
+        "description": "A product company from Kerala building community-driven software products.",
+        "founder": { "@id": "https://shithin.com/#person" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Kozhikode", "addressRegion": "Kerala", "addressCountry": "India" }
+      },
+      { "@type": "WebSite", "@id": "https://shithin.com/#website", "url": "https://shithin.com", "name": "Shithin Ram", "publisher": { "@id": "https://shithin.com/#person" } }
     ]
   }
   </script>
+  
+  <style>
+    /* ==========================================================================
+       ShithinOS '98 — Pure Vintage OS Design System (Zero External Dependencies)
+       ========================================================================== */
+    :root {
+      --bg-desktop: #111114;
+      --win-bg: #1e1e24;
+      --win-header-1: #991b1b;
+      --win-header-2: #7f1d1d;
+      --bevel-light: #44444c;
+      --bevel-dark: #000000;
+      --accent: #ff3344;
+      --accent-glow: rgba(255, 51, 68, 0.2);
+      --accent-green: #34d399;
+      --text-main: #f4f4f7;
+      --text-muted: #a1a1aa;
+      --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Courier New", monospace;
+      --font-mono: "Courier New", Courier, monospace;
+    }
+
+    /* THEME PRESETS */
+    body[data-theme="matrix"] {
+      --bg-desktop: #041009;
+      --win-bg: #091a10;
+      --win-header-1: #065f46;
+      --win-header-2: #044332;
+      --bevel-light: #1e3a29;
+      --accent: #10b981;
+      --accent-glow: rgba(16, 185, 129, 0.2);
+    }
+    body[data-theme="amber"] {
+      --bg-desktop: #140f04;
+      --win-bg: #1c1508;
+      --win-header-1: #92400e;
+      --win-header-2: #78350f;
+      --bevel-light: #45341a;
+      --accent: #f59e0b;
+      --accent-glow: rgba(245, 158, 11, 0.2);
+    }
+    body[data-theme="cyberpunk"] {
+      --bg-desktop: #0c0817;
+      --win-bg: #150f29;
+      --win-header-1: #86198f;
+      --win-header-2: #701a75;
+      --bevel-light: #4c1d68;
+      --accent: #06b6d4;
+      --accent-glow: rgba(6, 182, 212, 0.2);
+    }
+    body[data-theme="classic95"] {
+      --bg-desktop: #2c3e50;
+      --win-bg: #c0c0c0;
+      --win-header-1: #000080;
+      --win-header-2: #1084d0;
+      --bevel-light: #ffffff;
+      --bevel-dark: #808080;
+      --accent: #000080;
+      --accent-glow: rgba(0, 0, 128, 0.2);
+      --text-main: #000000;
+      --text-muted: #444444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    body {
+      background-color: var(--bg-desktop);
+      color: var(--text-main);
+      font-family: var(--font-system);
+      font-size: 13px;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: background-color 0.2s ease;
+    }
+
+    /* Retro Bevel Classes */
+    .outset {
+      border-top: 2px solid var(--bevel-light);
+      border-left: 2px solid var(--bevel-light);
+      border-right: 2px solid var(--bevel-dark);
+      border-bottom: 2px solid var(--bevel-dark);
+    }
+    .inset {
+      border-top: 2px solid var(--bevel-dark);
+      border-left: 2px solid var(--bevel-dark);
+      border-right: 2px solid var(--bevel-light);
+      border-bottom: 2px solid var(--bevel-light);
+    }
+    .btn-retro {
+      background: #24242c;
+      color: var(--text-main);
+      font-family: var(--font-system);
+      font-size: 12px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 8px;
+      border-top: 2px solid var(--bevel-light);
+      border-left: 2px solid var(--bevel-light);
+      border-right: 2px solid var(--bevel-dark);
+      border-bottom: 2px solid var(--bevel-dark);
+      text-decoration: none;
+    }
+    body[data-theme="classic95"] .btn-retro {
+      background: #c0c0c0;
+      color: #000;
+    }
+    .btn-retro:hover {
+      filter: brightness(1.15);
+    }
+    .btn-retro:active {
+      border-top: 2px solid var(--bevel-dark);
+      border-left: 2px solid var(--bevel-dark);
+      border-right: 2px solid var(--bevel-light);
+      border-bottom: 2px solid var(--bevel-light);
+      transform: translate(1px, 1px);
+    }
+
+    /* CRT Scanlines Overlay */
+    .scanlines {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%), 
+                  linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 255, 0, 0.04));
+      background-size: 100% 4px, 6px 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+    .scanlines.off { display: none; }
+
+    /* Desktop Surface */
+    #desktop {
+      flex: 1;
+      position: relative;
+      background-color: var(--bg-desktop);
+      background-image: radial-gradient(var(--accent-glow) 1.2px, transparent 0);
+      background-size: 12px 12px;
+      padding: 16px;
+      overflow: hidden;
+    }
+
+    /* Desktop Centerpiece Dashboard (When Windows Are Closed) */
+    #desktop-centerpiece {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 600px;
+      pointer-events: auto;
+      z-index: 5;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding: 24px;
+      background: rgba(10, 10, 14, 0.7);
+      border: 1px dashed var(--bevel-light);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(2px);
+    }
+    body[data-theme="classic95"] #desktop-centerpiece {
+      background: rgba(192, 192, 192, 0.85);
+      border-color: #808080;
+    }
+    .center-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      letter-spacing: 1px;
+    }
+    .center-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+      line-height: 1.1;
+      text-shadow: 0 0 16px var(--accent-glow);
+    }
+    body[data-theme="classic95"] .center-title {
+      color: #000080;
+      text-shadow: none;
+    }
+    .center-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 480px;
+      line-height: 1.5;
+    }
+    .crawl-graph-box {
+      width: 100%;
+      height: 48px;
+      background: #09090c;
+      border: 1px solid #272730;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .crawl-graph-box:hover {
+      border-color: var(--accent);
+    }
+    .crawl-graph-box:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    .crawl-graph-box.playing {
+      border-color: var(--accent);
+      box-shadow: 0 0 14px var(--accent-glow);
+    }
+    .crawl-bar {
+      width: 3px;
+      margin: 0 1.5px;
+      background: var(--accent);
+      transition: height 0.3s ease;
+    }
+    /* While playing, the bars step faster than the 0.3s transition, so easing
+       is dropped to keep the motion tied to the beat rather than lagging. */
+    .crawl-graph-box.playing .crawl-bar {
+      transition: height 0.08s linear;
+    }
+
+    /* Top Menu Bar */
+    #top-bar {
+      height: 30px;
+      background: #1c1c24;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+      z-index: 5000;
+      position: relative;
+    }
+    body[data-theme="classic95"] #top-bar {
+      background: #c0c0c0;
+      color: #000;
+    }
+    .top-left {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .top-menu-btn {
+      background: transparent;
+      border: none;
+      color: inherit;
+      padding: 3px 8px;
+      cursor: pointer;
+      font-size: 12px;
+      border-radius: 2px;
+    }
+    .top-menu-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+    }
+
+    /* Dropdown Menus */
+    .dropdown-menu {
+      position: absolute;
+      top: 28px;
+      background: var(--win-bg);
+      z-index: 7000;
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      width: 190px;
+      box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.6);
+    }
+    .dropdown-menu.hidden { display: none; }
+    .dropdown-item {
+      padding: 4px 8px;
+      font-size: 11px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-main);
+      background: transparent;
+      border: none;
+      text-align: left;
+      width: 100%;
+    }
+    .dropdown-item:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Desktop Icons */
+    .icon-grid {
+      display: grid;
+      grid-template-rows: repeat(5, auto);
+      grid-auto-flow: column;
+      gap: 20px 24px;
+      width: fit-content;
+      position: relative;
+      z-index: 10;
+    }
+    .desktop-icon {
+      width: 78px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 4px;
+    }
+    .desktop-icon:hover {
+      background: var(--accent-glow);
+      outline: 1px dashed var(--accent);
+    }
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      background: #181820;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    body[data-theme="classic95"] .icon-box {
+      background: #c0c0c0;
+      color: #000;
+    }
+    .icon-label {
+      font-size: 11px;
+      text-align: center;
+      color: #e4e4e7;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 2px 4px;
+      border-radius: 3px;
+      word-break: break-word;
+      line-height: 1.2;
+    }
+    body[data-theme="classic95"] .icon-label {
+      color: #fff;
+      background: #000080;
+    }
+
+    /* Retro Windows */
+    .retro-window {
+      position: absolute;
+      background: var(--win-bg);
+      min-width: 310px;
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      z-index: 20;
+    }
+    .retro-window.hidden { display: none; }
+    
+    .window-titlebar {
+      height: 26px;
+      background: repeating-linear-gradient(90deg, var(--win-header-1), var(--win-header-1) 2px, var(--win-header-2) 2px, var(--win-header-2) 4px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6px;
+      cursor: move;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 11.5px;
+      letter-spacing: 0.5px;
+    }
+    .window-controls {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .win-ctrl-btn {
+      width: 17px;
+      height: 17px;
+      background: #272730;
+      color: #f4f4f5;
+      font-size: 10px;
+      font-weight: bold;
+      border: 1px solid var(--bevel-light);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    body[data-theme="classic95"] .win-ctrl-btn {
+      background: #c0c0c0;
+      color: #000;
+      border-color: #808080;
+    }
+    .win-ctrl-btn:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    .window-menu {
+      background: #24242c;
+      border-bottom: 1px solid #121216;
+      padding: 2px 8px;
+      display: flex;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    body[data-theme="classic95"] .window-menu {
+      background: #c0c0c0;
+      color: #333;
+      border-bottom: 1px solid #808080;
+    }
+    .window-body {
+      padding: 14px;
+      overflow-y: auto;
+      max-height: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* Interactive Terminal Screen */
+    .terminal-container {
+      background: #060608;
+      border: 2px solid #000;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      height: 290px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .terminal-output {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      color: #34d399;
+      line-height: 1.5;
+    }
+    .terminal-input-row {
+      display: flex;
+      align-items: center;
+      padding: 6px 10px;
+      background: #0d0d12;
+      border-top: 1px solid #1f1f28;
+      gap: 6px;
+    }
+    .cli-prompt {
+      color: var(--accent);
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .cli-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+    }
+
+    /* Snake Escape Game Arena */
+    #game-canvas-area {
+      width: 100%;
+      height: 250px;
+      background: #08080a;
+      border: 2px solid #272730;
+      position: relative;
+      overflow: hidden;
+    }
+    .game-portal {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 6px;
+      height: 80px;
+      background: repeating-linear-gradient(0deg, var(--accent), var(--accent) 4px, transparent 4px, transparent 8px);
+      animation: portalPulse 1s infinite alternate;
+    }
+    @keyframes portalPulse {
+      0% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+    /* Motion is driven every animation frame now, so no CSS transition —
+       a transition here would fight the loop and just add lag. */
+    .game-sprite {
+      position: absolute;
+      font-size: 20px;
+      line-height: 1;
+      will-change: left, top;
+      z-index: 100;
+    }
+
+    /* Breakout Desktop Overlay for Game */
+    #breakout-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 8000;
+      display: none;
+    }
+    #breakout-overlay.active {
+      display: block;
+    }
+    .desktop-snake {
+      position: absolute;
+      font-size: 22px;
+      line-height: 1;
+      will-change: left, top;
+    }
+    .trash-target-glow {
+      box-shadow: 0 0 24px 6px var(--accent) !important;
+      animation: trashBeacon 0.8s infinite alternate;
+    }
+    @keyframes trashBeacon {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.15); }
+    }
+
+    /* Bottom Taskbar */
+    #taskbar {
+      height: 38px;
+      background: #1c1c24;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6px;
+      z-index: 5000;
+      position: relative;
+    }
+    body[data-theme="classic95"] #taskbar {
+      background: #c0c0c0;
+      color: #000;
+    }
+    .start-btn {
+      padding: 4px 12px;
+      font-weight: bold;
+      color: var(--accent);
+      gap: 6px;
+      font-size: 13px;
+    }
+    body[data-theme="classic95"] .start-btn {
+      color: #000;
+    }
+    .task-tabs {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 8px;
+      overflow-x: auto;
+    }
+    .task-tab {
+      padding: 4px 10px;
+      font-size: 11px;
+      background: #24242c;
+      color: #d4d4d8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    body[data-theme="classic95"] .task-tab {
+      background: #c0c0c0;
+      color: #000;
+    }
+    .task-tab.active {
+      background: #121216;
+      border-top: 2px solid var(--bevel-dark);
+      border-left: 2px solid var(--bevel-dark);
+      border-right: 2px solid var(--bevel-light);
+      border-bottom: 2px solid var(--bevel-light);
+    }
+    .system-tray {
+      background: #0d0d10;
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+    }
+    body[data-theme="classic95"] .system-tray {
+      background: #c0c0c0;
+      color: #000;
+    }
+
+    /* Start Menu Popup */
+    #start-menu {
+      position: absolute;
+      bottom: 38px;
+      left: 6px;
+      width: 260px;
+      background: #1c1c24;
+      z-index: 6000;
+      display: flex;
+      box-shadow: 6px -6px 0px rgba(0, 0, 0, 0.6);
+    }
+    #start-menu.hidden { display: none; }
+    body[data-theme="classic95"] #start-menu {
+      background: #c0c0c0;
+      color: #000;
+    }
+    .start-sidebar {
+      width: 32px;
+      background: linear-gradient(to top, var(--win-header-2), var(--accent));
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 12px;
+      color: #fff;
+      font-weight: bold;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+    .start-items {
+      flex: 1;
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .start-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 2px;
+      background: transparent;
+      border: none;
+      width: 100%;
+      text-align: left;
+    }
+    .start-item:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Responsive adjustments */
+
+    /* The menu row measures ~713px, so between 641px and 759px it used to clip
+       with the right-hand side (CRT toggle, clock) permanently unreachable.
+       Wrap it — and the taskbar — from 760px down. */
+    @media (max-width: 760px) {
+      #top-bar {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 2px 8px;
+        padding: 3px 8px;
+      }
+      .top-left {
+        flex-wrap: wrap;
+      }
+      .top-right {
+        padding-bottom: 2px;
+      }
+      /* The tray is the widest taskbar offender, so drop it (as phones do)
+         and let the task tabs scroll inside whatever space is left. */
+      #taskbar .system-tray {
+        display: none;
+      }
+      #taskbar {
+        gap: 4px;
+        padding: 2px 4px;
+      }
+      /* The Start + tabs row must be allowed to shrink, or the tabs stay at
+         full width and push the bar past the viewport. */
+      #taskbar > div:first-child {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .task-tabs {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .task-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .task-tab {
+        white-space: nowrap;
+      }
+      .retro-window {
+        max-height: calc(100vh - 128px);
+      }
+    }
+
+    @media (max-width: 640px) {
+      /* The menu bar and taskbar rules live in the 760px block above. */
+      #top-bar {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 2px 8px;
+        padding: 3px 8px;
+      }
+      .top-left {
+        flex-wrap: wrap;
+      }
+      .top-right {
+        padding-bottom: 2px;
+      }
+      /* Taskbar: the tray is the widest offender, so drop it (as phones do)
+         and let the task tabs scroll inside whatever space is left. */
+      #taskbar .system-tray {
+        display: none;
+      }
+      #taskbar {
+        gap: 4px;
+        padding: 2px 4px;
+      }
+      /* the Start button + tabs row must be allowed to shrink, or the tabs
+         stay at full width and push the bar past the viewport */
+      #taskbar > div:first-child {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .task-tabs {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .task-tabs::-webkit-scrollbar {
+        display: none;
+      }
+      .task-tab {
+        white-space: nowrap;
+      }
+      .retro-window {
+        width: 95vw !important;
+        left: 2.5vw !important;
+        /* clamp below the now-taller wrapped menu bar */
+        top: 78px !important;
+        max-height: calc(100vh - 128px);
+      }
+      /* Desktop goes from "icons down the left, panel floating in the middle"
+         (which collided below 1280px) to a simple stacked flow: icons laid out
+         in rows up top, dashboard centred underneath. */
+      #desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 12px;
+        overflow-y: auto;
+      }
+      .icon-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-auto-flow: row;
+        width: 100%;
+        gap: 12px 14px;
+      }
+      .desktop-icon {
+        width: 68px;
+      }
+      #desktop-centerpiece {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 16px;
+      }
+      .center-title {
+        font-size: 20px;
+      }
+    }
+    /* Tablet band: the original floating panel still collides with the icon
+       column between roughly 700px and 1279px, so pin the panel safely right
+       of the icons instead of centring it over them. */
+    @media (min-width: 641px) and (max-width: 1279px) {
+      #desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 14px;
+        overflow-y: auto;
+      }
+      .icon-grid {
+        width: 100%;
+        grid-template-rows: repeat(3, auto);
+        gap: 14px 18px;
+      }
+      .desktop-icon {
+        width: 72px;
+      }
+      #desktop-centerpiece {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 560px;
+        margin: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  </style>
 </head>
-<body>
+<body data-theme="crimson">
 
-  <main>
-    <!-- Navigation -->
-    <nav class="site-nav" aria-label="Main Navigation">
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link active">Home</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="cinema.html" class="nav-link">Cinema &amp; Art</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="services.html" class="nav-link">Services</a></li>
-      </ul>
-      <div class="nav-status">
-        <span class="pulse-dot" aria-hidden="true"></span>
-        <span>Kerala, IN</span>
+  <!-- Theme tune, triggered only by clicking the desktop wave.
+       NOT tracked in git: drop a licensed track in as assets/audio/the-sign.mp3
+       (see assets/audio/README.md). If it is missing the player shows
+       "AUDIO UNAVAILABLE" and everything else keeps working. -->
+  <audio id="wave-audio" src="assets/audio/the-sign.mp3" preload="metadata" loop></audio>
+
+  <!-- Scanlines Overlay -->
+  <div id="crt-screen" class="scanlines"></div>
+
+  <!-- BREAKOUT GAME DESKTOP OVERLAY -->
+  <div id="breakout-overlay">
+    <div id="desktop-runner" class="game-sprite">🏃</div>
+  </div>
+
+  <!-- TOP OS MENU BAR -->
+  <header id="top-bar" class="outset">
+    <div class="top-left">
+      <button class="top-menu-btn" style="color: var(--accent); font-weight: bold;" onclick="toggleStartMenu()">
+        ❖ ShithinOS
+      </button>
+
+      <!-- Theme Switcher Menu -->
+      <div style="position: relative;">
+        <button class="top-menu-btn" onclick="toggleDropdown('theme-menu')">
+          Palette ▾
+        </button>
+        <div id="theme-menu" class="dropdown-menu outset hidden">
+          <button class="dropdown-item" onclick="setTheme('crimson')"><span>Crimson Noir</span> <span>(Default)</span></button>
+          <button class="dropdown-item" onclick="setTheme('matrix')"><span>Matrix Emerald</span> <span>(Hacker)</span></button>
+          <button class="dropdown-item" onclick="setTheme('amber')"><span>Amber CRT</span> <span>(Warm 80s)</span></button>
+          <button class="dropdown-item" onclick="setTheme('cyberpunk')"><span>Cyberpunk Neon</span> <span>(Cyan)</span></button>
+          <button class="dropdown-item" onclick="setTheme('classic95')"><span>Classic Platinum</span> <span>(Win95)</span></button>
+        </div>
       </div>
-    </nav>
 
-    <!-- Header / Hero -->
-    <header>
-      <h1>Shithin Ram</h1>
-      <p class="subtitle">
-        SEO consultant, web developer &amp; filmmaker · Kozhikode, Kerala
+      <button class="top-menu-btn" onclick="openWindow('win-theblackit')">TheBlackit</button>
+      <button class="top-menu-btn" onclick="openWindow('win-products')">Products</button>
+      <button class="top-menu-btn" onclick="openWindow('win-services')">Services</button>
+      <button class="top-menu-btn" onclick="openWindow('win-terminal')">Terminal</button>
+      <button class="top-menu-btn" onclick="openWindow('win-game')">Snake Game</button>
+      <button class="top-menu-btn" onclick="openWindow('win-instructions')">Guide</button>
+    </div>
+
+    <div class="top-right">
+      <button class="btn-retro" style="font-size: 10px; padding: 1px 6px;" onclick="toggleCRT()">
+        CRT: <span id="crt-indicator" style="color: var(--accent);">ON</span>
+      </button>
+      <span>Kozhikode</span>
+      <span id="top-clock" style="color: var(--accent); font-weight: bold;">--:--:-- IST</span>
+    </div>
+  </header>
+
+  <!-- DESKTOP WORKSPACE -->
+  <main id="desktop">
+
+    <!-- DESKTOP CENTERPIECE WIDGET (Visible in blank space when windows are closed) -->
+    <div id="desktop-centerpiece" class="inset">
+      <div class="center-badge">
+        <span>❖</span>
+        <span>SHITHIN RAM &bull; THEBLACKIT</span>
+      </div>
+      <h1 class="center-title">
+        Product Builder &bull; SEO Specialist<br>
+        <span style="font-size: 0.7em; opacity: 0.85; font-weight: normal;">Co-Founder @ TheBlackit</span>
+      </h1>
+      <p class="center-sub">
+        Building sovereign digital products, high-velocity Chrome extensions, and solving algorithmic crawl bottlenecks.
       </p>
-    </header>
 
-    <!-- Personal Intro -->
-    <section aria-labelledby="intro-heading">
-      <p class="lead">
-        I spend my days untangling search algorithms and building clean web tools, and my nights writing screenplays, acting, directing independent shorts, and dissecting cinema.
-      </p>
-      <p>
-        Currently leading SEO strategy at <a href="https://acodez.in" target="_blank" rel="noopener noreferrer">Acodez IT Solutions</a>, building digital experiments under <strong>TheBlackit</strong>, and producing visual stories at <a href="https://www.youtube.com/@EkalavyansStudio" target="_blank" rel="noopener noreferrer">Ekalavyan Studios</a>.
-      </p>
-    </section>
+      <!-- Live Simulated Crawl Activity Graph (click to play) -->
+      <div class="crawl-graph-box inset" id="crawl-bars" role="button" tabindex="0"
+           aria-pressed="false" aria-label="Play the theme tune and animate the graph"
+           title="Click to play"></div>
+      <div id="wave-hint" style="font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); letter-spacing: 0.5px; margin-top: -6px;">▶ CLICK THE WAVE TO PLAY</div>
 
-    <!-- Building & Software -->
-    <section aria-labelledby="building-heading">
-      <h2 id="building-heading" class="section-title">Building &amp; Software</h2>
-      <ul class="item-list">
-        <li>
-          <a href="projects.html#theblackit" class="item-row">
-            <div class="item-left">
-              <span class="item-title">
-                TheBlackit
-                <span class="item-tag">Lab</span>
-              </span>
-              <span class="item-subtitle">Digital laboratory for software tools, experiments &amp; automations</span>
-            </div>
-            <div class="item-right">
-              <span>Active</span>
-              <span class="item-arrow">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="projects.html#keeptime" class="item-row">
-            <div class="item-left">
-              <span class="item-title">
-                Keeptime
-                <span class="item-tag">Chrome Extension</span>
-              </span>
-              <span class="item-subtitle">Attendance &amp; HRM platform with BYOD Google Sheets architecture</span>
-            </div>
-            <div class="item-right">
-              <span>Published</span>
-              <span class="item-arrow">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="projects.html#clockroach" class="item-row">
-            <div class="item-left">
-              <span class="item-title">
-                Clockroach
-                <span class="item-tag">Chrome Extension</span>
-              </span>
-              <span class="item-subtitle">Zero-overhead work time tracking with direct cloud sync</span>
-            </div>
-            <div class="item-right">
-              <span>Published</span>
-              <span class="item-arrow">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="projects.html#brain-crawl" class="item-row">
-            <div class="item-left">
-              <span class="item-title">
-                Brain Crawl
-                <span class="item-tag">Chrome Extension</span>
-              </span>
-              <span class="item-subtitle">Interactive upskilling extension for daily digital marketing quizzes</span>
-            </div>
-            <div class="item-right">
-              <span>Published</span>
-              <span class="item-arrow">→</span>
-            </div>
-          </a>
-        </li>
-      </ul>
 
-      <div class="section-action">
-        <a href="projects.html" class="action-link">
-          All projects, apps &amp; SEO tools (10+) →
+      <!-- Quick Action Buttons -->
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 4px;">
+        <button class="btn-retro" onclick="openWindow('win-theblackit')">❖ TheBlackit Hub</button>
+        <button class="btn-retro" onclick="openWindow('win-terminal')">&gt;_ Open Terminal</button>
+        <button class="btn-retro" onclick="openWindow('win-game')" style="color: var(--accent); font-weight: bold;">🎮 Play Snake Escape</button>
+        <button class="btn-retro" onclick="openWindow('win-instructions')">📖 User Guide</button>
+      </div>
+    </div>
+
+    <!-- DESKTOP SHORTCUT ICONS -->
+    <div class="icon-grid">
+      <!-- 1. TheBlackit Hub -->
+      <div class="desktop-icon" onclick="openWindow('win-theblackit')">
+        <div class="icon-box outset" style="color: var(--accent);">❖</div>
+        <div class="icon-label">TheBlackit.hub</div>
+      </div>
+
+      <!-- 2. Products Folder -->
+      <div class="desktop-icon" onclick="openWindow('win-products')">
+        <div class="icon-box outset" style="color: #fbbf24;">📁</div>
+        <div class="icon-label">Products/</div>
+      </div>
+
+      <!-- 2b. Services -->
+      <div class="desktop-icon" onclick="openWindow('win-services')">
+        <div class="icon-box outset" style="color: var(--accent);">❖</div>
+        <div class="icon-label">Services</div>
+      </div>
+
+      <!-- 3. Keeptime App -->
+      <div class="desktop-icon" onclick="openWindow('win-keeptime')">
+        <div class="icon-box outset" style="color: #34d399;">⏱️</div>
+        <div class="icon-label">Keeptime.exe</div>
+      </div>
+
+      <!-- 4. Clockroach -->
+      <div class="desktop-icon" onclick="openWindow('win-clockroach')">
+        <div class="icon-box outset" style="color: #f43f5e;">🪲</div>
+        <div class="icon-label">Clockroach</div>
+      </div>
+
+      <!-- 5. Interactive SEO Terminal -->
+      <div class="desktop-icon" onclick="openWindow('win-terminal')">
+        <div class="icon-box outset" style="color: var(--accent); font-family: var(--font-mono); font-weight: bold;">&gt;_</div>
+        <div class="icon-label">SEO_CLI.exe</div>
+      </div>
+
+      <!-- 6. User Instructions Guide -->
+      <div class="desktop-icon" onclick="openWindow('win-instructions')">
+        <div class="icon-box outset" style="color: #38bdf8;">📖</div>
+        <div class="icon-label">Instructions.txt</div>
+      </div>
+
+      <!-- 7. Snake Escape Game -->
+      <div class="desktop-icon" onclick="openWindow('win-game')">
+        <div class="icon-box outset" style="color: #fb7185;">🐍</div>
+        <div class="icon-label">Snake_Escape.exe</div>
+      </div>
+
+      <!-- 8. Founder Bio -->
+      <div class="desktop-icon" onclick="openWindow('win-bio')">
+        <div class="icon-box outset" style="color: #60a5fa;">📄</div>
+        <div class="icon-label">Founder_Bio.txt</div>
+      </div>
+
+      <!-- 9. Contact -->
+      <div class="desktop-icon" onclick="openWindow('win-contact')">
+        <div class="icon-box outset" style="color: #e879f9;">✉️</div>
+        <div class="icon-label">Contact.msg</div>
+      </div>
+
+      <!-- 10. Recycle Bin Target -->
+      <div id="desktop-trash-icon" class="desktop-icon" onclick="openWindow('win-trash')">
+        <div class="icon-box outset" style="color: #a1a1aa;">🗑️</div>
+        <div class="icon-label">Trash_Bin</div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         WINDOW 1: THEBLACKIT.COM (FLAGSHIP HUB - CO-FOUNDER ATTRIBUTION)
+         ====================================================================== -->
+    <div id="win-theblackit" class="retro-window outset" style="top: 24px; left: 140px; width: 530px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-theblackit')">
+        <span>❖ THEBLACKIT_HUB.EXE — [INNOVATION LAB]</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="minimizeWindow('win-theblackit')">_</button>
+          <button class="win-ctrl-btn" onclick="closeWindow('win-theblackit')">X</button>
+        </div>
+      </div>
+      <div class="window-menu">
+        <span>File</span><span>Venture</span><span>Incubator</span><span>About</span>
+      </div>
+      <div class="window-body">
+        <div class="inset" style="background: #09090c; padding: 12px;">
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #272730; padding-bottom: 6px; margin-bottom: 8px;">
+            <strong style="color: var(--accent); font-size: 11px;">&gt;&gt; THE INNOVATION ECOSYSTEM</strong>
+            <span style="font-family: var(--font-mono); color: var(--accent-green); font-size: 10px;">STATUS: ACTIVE</span>
+          </div>
+          <h2 style="font-size: 18px; font-weight: bold; color: #fff; margin-bottom: 4px;">TheBlackit</h2>
+          <p style="color: #d4d4d8; font-size: 12px; line-height: 1.6;">
+            The central digital laboratory and product studio founded by <strong>Shithin Ram and his close friends &amp; collaborators</strong>. Shithin serves as <strong>Co-Founder</strong>, directing search architecture and product engineering.
+          </p>
+          <p style="color: #a1a1aa; font-size: 11px; line-height: 1.5; margin-top: 6px;">
+            We build and incubate sovereign software tools, Chrome extensions, and specialized SEO automation utilities designed to eliminate manual friction and replace bloated recurring SaaS subscriptions.
+          </p>
+        </div>
+
+        <!-- Launch theblackit.com button -->
+        <div style="background: rgba(153, 27, 27, 0.25); border: 1px solid rgba(220, 38, 38, 0.4); padding: 10px; display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <div style="font-weight: bold; color: #fff; font-size: 12px;">Venture Studio Address:</div>
+            <div style="font-family: var(--font-mono); color: var(--accent); font-size: 11px;">https://theblackit.com</div>
+          </div>
+          <a href="https://theblackit.com" target="_blank" class="btn-retro" style="background: var(--win-header-1); color: #fff; font-weight: bold;">
+            Launch theblackit.com ↗
+          </a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+          <div class="inset" style="background: #141418; padding: 8px;">
+            <strong style="color: var(--accent); font-size: 11px; display: block; margin-bottom: 2px;">01. BROWSER EXTENSIONS</strong>
+            <span style="font-size: 10px; color: #a1a1aa;">Manifest V3 tools published to the Chrome Web Store.</span>
+          </div>
+          <div class="inset" style="background: #141418; padding: 8px;">
+            <strong style="color: var(--accent); font-size: 11px; display: block; margin-bottom: 2px;">02. SEO AUTOMATION</strong>
+            <span style="font-size: 10px; color: #a1a1aa;">Internal linking engines &amp; Generative AI (GEO) systems.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         WINDOW 2: FULLY INTERACTIVE SEO TERMINAL
+         ====================================================================== -->
+    <div id="win-terminal" class="retro-window outset" style="top: 50px; right: 28px; width: 480px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-terminal')">
+        <span>&gt; C:\SHITHIN\SEO_CLI.EXE — [INTERACTIVE PROMPT]</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="minimizeWindow('win-terminal')">_</button>
+          <button class="win-ctrl-btn" onclick="closeWindow('win-terminal')">X</button>
+        </div>
+      </div>
+      <div class="window-body" style="padding: 0;">
+        <div class="terminal-container inset">
+          <div class="terminal-output" id="cli-output">
+            <div style="color: #71717a;">ShithinOS Command Prompt [Version 1.0.98]<br>(C) 2026 Shithin Ram &amp; TheBlackit. All rights reserved.<br>Type <span style="color: var(--accent); font-weight: bold;">help</span> or <span style="color: var(--accent); font-weight: bold;">ls</span> to begin.</div>
+            <br>
+            <div><span style="color: var(--accent);">C:\&gt;</span> whoami</div>
+            <div style="color: #fff;">Shithin Ram — Product Builder, SEO Specialist &amp; Co-Founder @ TheBlackit</div>
+          </div>
+          <form class="terminal-input-row" onsubmit="handleCliSubmit(event)">
+            <span class="cli-prompt" id="cli-prompt-text">C:\&gt;</span>
+            <input type="text" id="cli-input" class="cli-input" autocomplete="off" spellcheck="false" autofocus>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         WINDOW 3: USER INSTRUCTIONS GUIDE (README)
+         ====================================================================== -->
+    <div id="win-instructions" class="retro-window outset hidden" style="top: 70px; left: 160px; width: 490px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-instructions')">
+        <span>📖 INSTRUCTIONS.TXT — USER GUIDE</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="minimizeWindow('win-instructions')">_</button>
+          <button class="win-ctrl-btn" onclick="closeWindow('win-instructions')">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="inset" style="background: #09090c; padding: 12px; font-family: var(--font-mono); font-size: 11px; line-height: 1.6; color: #d4d4d8;">
+          <strong style="color: var(--accent); font-size: 13px;">WELCOME TO SHITHIN_OS v1.0</strong><br>
+          An interactive vintage OS portfolio for Shithin Ram.
+          <hr style="border: 0; border-top: 1px dashed #3f3f46; margin: 8px 0;">
+
+          <strong>1. INTERACTIVE TERMINAL COMMANDS:</strong><br>
+          &bull; <span style="color: #fff;">ls</span> or <span style="color: #fff;">dir</span> — List directory contents<br>
+          &bull; <span style="color: #fff;">cd &lt;dir&gt;</span> — Change folder (e.g. <span style="color: var(--accent);">cd products</span>, <span style="color: var(--accent);">cd ..</span>)<br>
+          &bull; <span style="color: #fff;">cat &lt;file&gt;</span> — Read text files in terminal<br>
+          &bull; <span style="color: #fff;">open &lt;app&gt;</span> — Launch GUI window (e.g. <span style="color: var(--accent);">open theblackit</span>)<br>
+          &bull; <span style="color: #fff;">theme &lt;name&gt;</span> — Change theme (<span style="color: var(--accent);">crimson</span>, <span style="color: var(--accent);">matrix</span>, <span style="color: var(--accent);">amber</span>, <span style="color: var(--accent);">cyberpunk</span>, <span style="color: var(--accent);">classic95</span>)<br>
+          &bull; <span style="color: #fff;">clear</span> — Wipe terminal output<br>
+          &bull; <span style="color: #fff;">help</span> — Show full manual
+          <br><br>
+          <strong>2. COLOR THEMES:</strong><br>
+          Click <span style="color: var(--accent);">Palette ▾</span> in the top menu to switch between 5 authentic retro schemes.
+          <br><br>
+          <strong>3. SNAKE ESCAPE EASTER EGG GAME:</strong><br>
+          Launch <span style="color: var(--accent);">Snake_Escape.exe</span>. Control the runner (🏃) with Arrow Keys or WASD. 
+          <span style="color: #fb7185; font-weight: bold;">SECRET:</span> Run through the dashed gate on the right of the game window to break out onto the desktop! Then race to touch the <span style="color: var(--accent);">Trash Bin (🗑️)</span> icon to win!
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         WINDOW 4: SNAKE ESCAPE: BREAKOUT GAME
+         ====================================================================== -->
+    <div id="win-game" class="retro-window outset hidden" style="top: 80px; left: 190px; width: 460px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-game')">
+        <span>🎮 SNAKE_ESCAPE.EXE — [BREAKOUT ARCADE]</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="minimizeWindow('win-game')">_</button>
+          <button class="win-ctrl-btn" onclick="closeWindow('win-game')">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+          <span>Use <strong style="color: var(--accent);">Arrow Keys / WASD</strong> to Run</span>
+          <span style="font-family: var(--font-mono); color: #fb7185;">Escape to the right! →</span>
+        </div>
+
+        <div id="game-canvas-area" class="inset">
+          <!-- Gateway to Desktop -->
+          <div class="game-portal" title="Exit to Desktop!"></div>
+          <span style="position: absolute; right: 8px; top: 90px; font-size: 9px; color: var(--accent); font-family: var(--font-mono); [writing-mode:vertical-lr]; letter-spacing: 1px;">EXIT →</span>
+
+          <!-- Running Man Sprite -->
+          <div id="in-game-runner" class="game-sprite" style="top: 110px; left: 40px;">🏃</div>
+
+          <!-- Chasing Snake Sprites -->
+          <div id="in-game-snake1" class="game-sprite" style="top: 40px; left: 180px;">🐍</div>
+          <div id="in-game-snake2" class="game-sprite" style="top: 180px; left: 240px;">🐍</div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <button class="btn-retro" onclick="restartGame()">Reset Game</button>
+          <span style="font-size: 10px; color: var(--text-muted); font-style: italic;">
+            Goal: Escape beyond window boundary &amp; reach the Trash Bin!
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         WINDOW 5: PRODUCTS FOLDER / EXPLORER
+         ====================================================================== -->
+    <div id="win-products" class="retro-window outset hidden" style="top: 80px; left: 180px; width: 480px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-products')">
+        <span>C:\THEBLACKIT\PRODUCTS_SUITE\</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="minimizeWindow('win-products')">_</button>
+          <button class="win-ctrl-btn" onclick="closeWindow('win-products')">X</button>
+        </div>
+      </div>
+      <div class="window-menu">
+        <span>File</span><span>Edit</span><span>View</span><span>Run</span>
+      </div>
+      <div class="window-body">
+        <div class="inset" style="background: #141418; padding: 8px; display: flex; flex-direction: column; gap: 6px;">
+          
+          <div class="btn-retro" style="justify-content: space-between; padding: 6px 10px;" onclick="openWindow('win-keeptime')">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span>⏱️</span>
+              <div style="text-align: left;">
+                <strong style="color: #fff; font-size: 12px; display: block;">Keeptime.exe</strong>
+                <span style="font-size: 10px; color: #a1a1aa;">Attendance &amp; HRM Chrome extension (BYOD architecture)</span>
+              </div>
+            </div>
+            <span style="color: var(--accent); font-size: 10px; font-family: var(--font-mono);">[EXEC]</span>
+          </div>
+
+          <div class="btn-retro" style="justify-content: space-between; padding: 6px 10px;" onclick="openWindow('win-clockroach')">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span>🪲</span>
+              <div style="text-align: left;">
+                <strong style="color: #fff; font-size: 12px; display: block;">Clockroach.exe</strong>
+                <span style="font-size: 10px; color: #a1a1aa;">Zero-overhead work time tracking tool</span>
+              </div>
+            </div>
+            <span style="color: var(--accent); font-size: 10px; font-family: var(--font-mono);">[EXEC]</span>
+          </div>
+
+          <div class="btn-retro" style="justify-content: space-between; padding: 6px 10px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span>🧠</span>
+              <div style="text-align: left;">
+                <strong style="color: #fff; font-size: 12px; display: block;">BrainCrawl.app</strong>
+                <span style="font-size: 10px; color: #a1a1aa;">Gamified daily marketing &amp; SEO quiz extension</span>
+              </div>
+            </div>
+            <span style="color: #a1a1aa; font-size: 10px; font-family: var(--font-mono);">STORE</span>
+          </div>
+
+          <div class="btn-retro" style="justify-content: space-between; padding: 6px 10px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span>📱</span>
+              <div style="text-align: left;">
+                <strong style="color: #fff; font-size: 12px; display: block;">DoOrDieHabiter.apk</strong>
+                <span style="font-size: 10px; color: #a1a1aa;">Social habit accountability platform</span>
+              </div>
+            </div>
+            <span style="color: #a1a1aa; font-size: 10px; font-family: var(--font-mono);">MOBILE</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         WINDOW 6: KEEPTIME DETAIL
+         ====================================================================== -->
+    <div id="win-keeptime" class="retro-window outset hidden" style="top: 100px; left: 220px; width: 420px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-keeptime')">
+        <span>⏱️ KEEPTIME.EXE — [HRM EXTENSION]</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="closeWindow('win-keeptime')">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <h3 style="color: #fff; font-size: 14px;">Privacy-First Team HRM Platform</h3>
+        <p style="color: #d4d4d8; font-size: 11px; line-height: 1.5;">
+          Engineered on a BYOD (Bring Your Own Data) model under <strong>TheBlackit</strong>. Connects directly into team Google Sheets backends for automated clocking, break logging, and leave approval workflows without per-seat SaaS costs.
+        </p>
+        <div class="inset" style="background: #111114; padding: 6px; font-family: var(--font-mono); font-size: 10px; color: var(--accent);">
+          Chrome Manifest V3 &bull; Google Sheets API &bull; BYOD Security
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         WINDOW 7: CLOCKROACH DETAIL
+         ====================================================================== -->
+    <div id="win-clockroach" class="retro-window outset hidden" style="top: 120px; left: 260px; width: 420px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-clockroach')">
+        <span>🪲 CLOCKROACH.EXE — [TIME LOGGER]</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="closeWindow('win-clockroach')">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <h3 style="color: #fff; font-size: 14px;">Zero-Overhead Work Time Logger</h3>
+        <p style="color: #d4d4d8; font-size: 11px; line-height: 1.5;">
+          A lightweight, friction-free time-logging tool built for fast-moving developers, agencies, and operators. Built under TheBlackit to eliminate tracking drag.
+        </p>
+        <div class="inset" style="background: #111114; padding: 6px; font-family: var(--font-mono); font-size: 10px; color: var(--accent-green);">
+          Client-Side Cloud Sync &bull; 1-Click Sprint Logs &bull; Zero Overhead
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         WINDOW 8: FOUNDER BIO (CO-FOUNDER ATTRIBUTION)
+         ====================================================================== -->
+    <div id="win-bio" class="retro-window outset hidden" style="top: 90px; left: 160px; width: 480px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-bio')">
+        <span>📄 FOUNDER_BIO.TXT — NOTEPAD</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="closeWindow('win-bio')">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="inset" style="background: #09090c; padding: 12px; font-family: var(--font-mono); font-size: 11px; line-height: 1.6; color: #d4d4d8;">
+          <strong style="color: #fff; font-size: 13px;">SHITHIN RAM S</strong><br>
+          Product Builder &bull; SEO Specialist &bull; Entrepreneur<br>
+          Co-Founder @ TheBlackit &bull; Kozhikode, Kerala, India<br>
+          <hr style="border: 0; border-top: 1px dashed #3f3f46; margin: 8px 0;">
+          4+ years of high-output search leadership and technical software engineering. 
+          <br><br>
+          &bull; <strong>TheBlackit:</strong> Started by me and my close friends/collaborators as our shared innovation hub &amp; product studio.<br>
+          &bull; <strong>Acodez IT Solutions:</strong> Serving as SEO Team Lead, directing core operations, technical audits, and outranking enterprise giants like Wix and GoDaddy.<br>
+          &bull; <strong>Background:</strong> BSc Computer Science graduate, specializing in Generative Engine Optimization (GEO), Core Web Vitals, and Manifest V3 Chrome extensions.
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         WINDOW 9: CONTACT / MESSAGE
+         ====================================================================== -->
+    <div id="win-contact" class="retro-window outset hidden" style="top: 110px; left: 200px; width: 420px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-contact')">
+        <span>✉️ CONTACT_SHITHIN.MSG</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="closeWindow('win-contact')">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p style="font-size: 12px; color: #d4d4d8;">
+          Available for high-stakes SEO advisory, product collaborations, and venture discussions.
+        </p>
+        <div class="inset" style="background: #111114; padding: 10px; display: flex; flex-direction: column; gap: 6px;">
+          <div><strong style="color: var(--accent);">Email:</strong> <span style="font-family: var(--font-mono);">shithinrams2001@gmail.com</span></div>
+          <div><strong style="color: var(--accent);">Venture Hub:</strong> <a href="https://theblackit.com" target="_blank" style="color: #60a5fa;">theblackit.com</a></div>
+          <div><strong style="color: var(--accent);">LinkedIn:</strong> <a href="https://www.linkedin.com/in/shithin-ram-158327246/" target="_blank" style="color: #60a5fa;">/in/shithin-ram</a></div>
+          <div><strong style="color: var(--accent);">GitHub:</strong> <a href="https://github.com/shithins/" target="_blank" style="color: #60a5fa;">@shithins</a></div>
+        </div>
+        <a href="mailto:shithinrams2001@gmail.com" class="btn-retro" style="background: var(--accent); color: #fff; font-weight: bold; width: 100%;">
+          Send Direct Email ↗
         </a>
       </div>
-    </section>
+    </div>
 
-    <!-- Cinema & Artistic Works -->
-    <section aria-labelledby="cinema-heading">
-      <h2 id="cinema-heading" class="section-title">Cinema &amp; Stories</h2>
-      <ul class="item-list">
-        <li>
-          <a href="cinema.html#ekalavyan" class="item-row">
-            <div class="item-left">
-              <span class="item-title">
-                Ekalavyan Studios
-                <span class="item-tag">YouTube</span>
-              </span>
-              <span class="item-subtitle">Independent production channel for original shorts &amp; visual experiments</span>
-            </div>
-            <div class="item-right">
-              <span>Channel</span>
-              <span class="item-arrow">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="cinema.html#directing" class="item-row">
-            <div class="item-left">
-              <span class="item-title">
-                Directing &amp; Screenwriting
-                <span class="item-tag">Filmmaking</span>
-              </span>
-              <span class="item-subtitle">Character studies, conversational realism, and visual rhythm</span>
-            </div>
-            <div class="item-right">
-              <span>Craft</span>
-              <span class="item-arrow">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="cinema.html#acting" class="item-row">
-            <div class="item-left">
-              <span class="item-title">
-                Acting &amp; Performance
-                <span class="item-tag">Art</span>
-              </span>
-              <span class="item-subtitle">Screen presence, physical nuance, and emotional authenticity</span>
-            </div>
-            <div class="item-right">
-              <span>Perform</span>
-              <span class="item-arrow">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="cinema.html#criticism" class="item-row">
-            <div class="item-left">
-              <span class="item-title">
-                Film Criticism
-                <span class="item-tag">Analysis</span>
-              </span>
-              <span class="item-subtitle">Dissecting narrative structure, camera psychology, and world cinema</span>
-            </div>
-            <div class="item-right">
-              <span>Essays</span>
-              <span class="item-arrow">→</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-
-      <div class="section-action">
-        <a href="cinema.html" class="action-link">
-          Explore cinema works &amp; creative projects →
-        </a>
+    <!-- ======================================================================
+         WINDOW 10: RECYCLE BIN EASTER EGG
+         ====================================================================== -->
+    <div id="win-trash" class="retro-window outset hidden" style="top: 130px; left: 240px; width: 380px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-trash')">
+        <span>🗑️ RECYCLE_BIN — [OUTRANKED ARCHIVE]</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="closeWindow('win-trash')">X</button>
+        </div>
       </div>
-    </section>
-
-    <!-- Connect / Elsewhere -->
-    <section aria-labelledby="connect-heading">
-      <h2 id="connect-heading" class="section-title">Elsewhere</h2>
-      <ul class="item-list">
-        <li>
-          <a href="https://www.youtube.com/@EkalavyansStudio" target="_blank" rel="noopener noreferrer" class="item-row">
-            <div class="item-left">
-              <span class="item-title">YouTube</span>
-              <span class="item-subtitle">Short films, stories &amp; visual experiments</span>
-            </div>
-            <div class="item-right">
-              <span>@EkalavyansStudio</span>
-              <span class="item-arrow">↗</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/shithins/" target="_blank" rel="noopener noreferrer" class="item-row">
-            <div class="item-left">
-              <span class="item-title">GitHub</span>
-              <span class="item-subtitle">Extensions, code &amp; open experiments</span>
-            </div>
-            <div class="item-right">
-              <span>@shithins</span>
-              <span class="item-arrow">↗</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/shithin-ram-158327246/" target="_blank" rel="noopener noreferrer" class="item-row">
-            <div class="item-left">
-              <span class="item-title">LinkedIn</span>
-              <span class="item-subtitle">Industry thoughts &amp; SEO analysis</span>
-            </div>
-            <div class="item-right">
-              <span>/in/shithin-ram</span>
-              <span class="item-arrow">↗</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:shithinrams2001@gmail.com" class="item-row" data-copy="shithinrams2001@gmail.com" data-label="email address">
-            <div class="item-left">
-              <span class="item-title">Email</span>
-              <span class="item-subtitle">shithinrams2001@gmail.com</span>
-            </div>
-            <div class="item-right">
-              <span>Copy address</span>
-              <span class="item-arrow">📋</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-
-      <div class="section-action" style="margin-top: 20px;">
-        <a href="services.html" class="action-link">
-          Need an SEO audit, consulting, or a web build? View services →
-        </a>
+      <div class="window-body">
+        <div class="inset" style="background: #09090c; padding: 8px; font-family: var(--font-mono); font-size: 10.5px; color: #a1a1aa; display: flex; flex-direction: column; gap: 4px;">
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #1f1f26; padding-bottom: 2px;">
+            <span>Wix_Top_Ranking.bak</span>
+            <span style="color: var(--accent);">[DEFEATED]</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #1f1f26; padding-bottom: 2px;">
+            <span>GoDaddy_SaaS_Keyword.old</span>
+            <span style="color: var(--accent);">[OUTRANKED]</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Bloated_SaaS_Fees.trash</span>
+            <span style="color: var(--accent-green);">[REPLACED]</span>
+          </div>
+        </div>
+        <p style="font-size: 10px; color: #71717a; font-style: italic;">
+          * Successfully outranked enterprise domains for competitive SaaS terms through pure technical SEO execution.
+        </p>
       </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-      <p class="footer-quote">Code what works. Frame what matters.</p>
-      <div class="footer-right">
-        <span>Kozhikode, KL</span>
-        <span>·</span>
-        <span class="footer-clock" id="kerala-clock">--:-- IST</span>
+    <!-- ======================================================================
+         WINDOW 12: SERVICES / ENGAGEMENT
+         ====================================================================== -->
+    <div id="win-services" class="retro-window outset hidden" style="top: 70px; left: 160px; width: 560px;">
+      <div class="window-titlebar" onmousedown="startDrag(event, 'win-services')">
+        <span>❖ SERVICES.EXE — [ENGAGEMENT MANAGER]</span>
+        <div class="window-controls">
+          <button class="win-ctrl-btn" onclick="minimizeWindow('win-services')">_</button>
+          <button class="win-ctrl-btn" onclick="closeWindow('win-services')">X</button>
+        </div>
       </div>
-    </footer>
+      <div class="window-menu">
+        <span>File</span><span>Engage</span><span>Process</span><span>FAQ</span>
+      </div>
+      <div class="window-body">
+
+        <div class="inset" style="background: #141418; padding: 10px; display: flex; flex-direction: column; gap: 6px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+            <strong style="color: #fff; font-size: 11.5px;">&gt;&gt; OPEN FOR Q4 ENGAGEMENTS</strong>
+            <span style="color: var(--accent-green); font-family: var(--font-mono); font-size: 10px;">[2 SLOTS]</span>
+          </div>
+          <p style="font-size: 10.5px; color: #a1a1aa; margin: 0; line-height: 1.5;">
+            Search work that pays for itself, measurably. Every engagement starts with a measurement pass, not a slide deck.
+          </p>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 10px; color: var(--accent); letter-spacing: 0.5px;">[01] THREE WAYS TO ENGAGE</div>
+
+        <div class="btn-retro" style="flex-direction: column; align-items: stretch; gap: 6px; padding: 10px; cursor: default;">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+            <strong style="color: #fff; font-size: 12px;">Technical Audit &amp; Roadmap</strong>
+            <span style="color: var(--accent); font-family: var(--font-mono); font-size: 10px;">2–3 WEEKS · FIXED FEE</span>
+          </div>
+          <span style="font-size: 10px; color: #a1a1aa; line-height: 1.6;">Full crawl, log and render analysis · Core Web Vitals field + lab diagnosis · indexation, schema and entity review · prioritised 90-day roadmap · walkthrough with your dev team.</span>
+        </div>
+
+        <div class="btn-retro" style="flex-direction: column; align-items: stretch; gap: 6px; padding: 10px; cursor: default;">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+            <strong style="color: #fff; font-size: 12px;">Fractional SEO Leadership</strong>
+            <span style="color: var(--accent); font-family: var(--font-mono); font-size: 10px;">MONTHLY · 2 SLOTS</span>
+          </div>
+          <span style="font-size: 10px; color: #a1a1aa; line-height: 1.6;">I own search outcomes with your team: monthly strategy, dev-ready technical tickets, a GEO and AI-citation programme, content briefs and internal linking, and reporting tied to pipeline rather than vanity metrics.</span>
+        </div>
+
+        <div class="btn-retro" style="flex-direction: column; align-items: stretch; gap: 6px; padding: 10px; cursor: default;">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+            <strong style="color: #fff; font-size: 12px;">SEO-First Build or Migration</strong>
+            <span style="color: var(--accent); font-family: var(--font-mono); font-size: 10px;">SCOPED PER PROJECT</span>
+          </div>
+          <span style="font-size: 10px; color: #a1a1aa; line-height: 1.6;">When the site itself is the problem: migrating without losing equity, a zero-bloat semantic front end, schema and template architecture, plus extensions and automation around it.</span>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 10px; color: var(--accent); letter-spacing: 0.5px; margin-top: 2px;">[02] HOW IT RUNS</div>
+
+        <div class="inset" style="background: #09090c; padding: 8px; font-family: var(--font-mono); font-size: 10.5px; color: #a1a1aa; display: flex; flex-direction: column; gap: 5px;">
+          <div><span style="color: var(--accent);">01</span> &nbsp;Measure &nbsp;—&nbsp; crawl, logs, field data, Search Console. Baseline agreed before anything is touched.</div>
+          <div><span style="color: var(--accent);">02</span> &nbsp;Diagnose &nbsp;—&nbsp; separate revenue-moving problems from things that merely look broken.</div>
+          <div><span style="color: var(--accent);">03</span> &nbsp;Build &nbsp;—&nbsp; dev-ready tickets, code where it's mine, verification that each fix shipped.</div>
+          <div><span style="color: var(--accent);">04</span> &nbsp;Compound &nbsp;—&nbsp; entity work, GEO, content structure and internal linking.</div>
+          <div><span style="color: var(--accent);">05</span> &nbsp;Report &nbsp;—&nbsp; qualified organic sessions, rankings that convert, AI citations.</div>
+        </div>
+
+        <div style="font-family: var(--font-mono); font-size: 10px; color: var(--accent); letter-spacing: 0.5px; margin-top: 2px;">[03] QUESTIONS I GET ASKED</div>
+
+        <details class="inset" style="background: #141418; padding: 8px 10px; border: 1px solid #272730;">
+          <summary style="cursor: pointer; color: #fff; font-size: 11.5px; font-weight: bold;">Can you work with our existing development team?</summary>
+          <p style="font-size: 10.5px; color: #a1a1aa; margin: 6px 0 0; line-height: 1.6;">That's the usual setup. I produce tickets your engineers can act on, review implementations and verify what shipped. If they're comfortable with me contributing code directly, that's usually faster.</p>
+        </details>
+
+        <details class="inset" style="background: #141418; padding: 8px 10px; border: 1px solid #272730;">
+          <summary style="cursor: pointer; color: #fff; font-size: 11.5px; font-weight: bold;">How long before we see something?</summary>
+          <p style="font-size: 10.5px; color: #a1a1aa; margin: 6px 0 0; line-height: 1.6;">Technical wins often show within weeks: indexation recoveries, crawl budget, page speed. Competitive ranking and entity gains compound over three to six months. I'll tell you which kind of result to expect at each stage.</p>
+        </details>
+
+        <details class="inset" style="background: #141418; padding: 8px 10px; border: 1px solid #272730;">
+          <summary style="cursor: pointer; color: #fff; font-size: 11.5px; font-weight: bold;">What about AI search and GEO?</summary>
+          <p style="font-size: 10.5px; color: #a1a1aa; margin: 6px 0 0; line-height: 1.6;">It runs alongside classic SEO, not instead of it. Entities, schema, structure and citable content are the same foundation that makes answer engines comfortable quoting you.</p>
+        </details>
+
+        <details class="inset" style="background: #141418; padding: 8px 10px; border: 1px solid #272730;">
+          <summary style="cursor: pointer; color: #fff; font-size: 11.5px; font-weight: bold;">Do you sign NDAs and work with agencies?</summary>
+          <p style="font-size: 10.5px; color: #a1a1aa; margin: 6px 0 0; line-height: 1.6;">Yes to both. A good share of my work is specialist support behind agency teams, including white-label technical audits.</p>
+        </details>
+
+        <div style="font-family: var(--font-mono); font-size: 10px; color: var(--accent); letter-spacing: 0.5px; margin-top: 2px;">[04] BOOK THE TEARDOWN</div>
+
+        <div class="inset" style="background: #141418; padding: 10px; display: flex; flex-direction: column; gap: 6px;">
+          <p style="font-size: 10.5px; color: #a1a1aa; margin: 0; line-height: 1.6;">Send the URL and one sentence about the business. I'll spend twenty minutes on crawlability, rendering, vitals and entity clarity, then tell you the three things I would fix first. No deck, no obligation.</p>
+          <a href="mailto:shithinrams2001@gmail.com" class="start-item" style="padding: 4px 6px; font-size: 11px; color: var(--accent);">✉️ shithinrams2001@gmail.com</a>
+          <a href="tel:+917025638802" class="start-item" style="padding: 4px 6px; font-size: 11px; color: var(--accent);">📞 +91 70256 38802 · call / WhatsApp</a>
+        </div>
+
+        <div class="btn-retro" style="justify-content: center; padding: 7px 10px;" onclick="openWindow('win-contact')">
+          <span style="color: var(--accent);">&gt;_</span> Open Contact Window
+        </div>
+
+      </div>
+    </div>
+
   </main>
 
-  <div id="toast" role="status" aria-live="polite"></div>
-  <script src="js/main.js"></script>
+  <!-- BOTTOM OS TASKBAR -->
+  <footer id="taskbar" class="outset">
+    <div style="display: flex; align-items: center; gap: 4px;">
+      <!-- Vintage Start Button -->
+      <button class="btn-retro start-btn" onclick="toggleStartMenu()">
+        <span>❖</span>
+        <span>Start</span>
+      </button>
+
+      <!-- Active Window Tabs -->
+      <div class="task-tabs">
+        <div id="tab-theblackit" class="btn-retro task-tab active" onclick="toggleWindow('win-theblackit')">
+          <span style="color: var(--accent);">❖</span> TheBlackit.hub
+        </div>
+        <div id="tab-services" class="btn-retro task-tab" onclick="toggleWindow('win-services')">
+          <span style="color: var(--accent);">❖</span> Services.exe
+        </div>
+        <div id="tab-terminal" class="btn-retro task-tab active" onclick="toggleWindow('win-terminal')">
+          <span style="color: var(--accent-green);">&gt;_</span> SEO_CLI.exe
+        </div>
+      </div>
+    </div>
+
+    <!-- System Tray -->
+    <div class="system-tray inset">
+      <span>🔊</span>
+      <span>Shithin Ram</span>
+      <span style="color: #3f3f46;">|</span>
+      <span id="bottom-clock" style="color: var(--accent); font-weight: bold;">--:-- IST</span>
+    </div>
+  </footer>
+
+  <!-- Retro Start Menu Popup -->
+  <div id="start-menu" class="outset hidden">
+    <div class="start-sidebar">SHITHIN_OS</div>
+    <div class="start-items">
+      <a href="https://theblackit.com" target="_blank" class="start-item">
+        <span style="color: var(--accent);">❖</span>
+        <div>
+          <strong style="display: block;">TheBlackit.com</strong>
+          <span style="font-size: 9px; color: #71717a;">The Innovation Hub</span>
+        </div>
+      </a>
+      <button class="start-item" onclick="openWindow('win-products'); toggleStartMenu();">
+        <span>📁</span>
+        <div>
+          <strong style="display: block;">Products Suite</strong>
+          <span style="font-size: 9px; color: #71717a;">Keeptime, Clockroach...</span>
+        </div>
+      </button>
+      <button class="start-item" onclick="openWindow('win-services'); toggleStartMenu();">
+        <span>❖</span>
+        <div>
+          <strong style="display: block;">Services &amp; Engagement</strong>
+          <span style="font-size: 9px; color: #71717a;">Audits, leadership, builds</span>
+        </div>
+      </button>
+      <button class="start-item" onclick="openWindow('win-terminal'); toggleStartMenu();">
+        <span>&gt;_</span>
+        <div>
+          <strong style="display: block;">Interactive Terminal</strong>
+          <span style="font-size: 9px; color: #71717a;">Type ls, cat, cd, etc.</span>
+        </div>
+      </button>
+      <button class="start-item" onclick="openWindow('win-game'); toggleStartMenu();">
+        <span>🎮</span>
+        <div>
+          <strong style="display: block;">Snake Escape Game</strong>
+          <span style="font-size: 9px; color: #71717a;">Breakout desktop arcade</span>
+        </div>
+      </button>
+      <button class="start-item" onclick="openWindow('win-instructions'); toggleStartMenu();">
+        <span>📖</span>
+        <span>Instructions Manual</span>
+      </button>
+      <button class="start-item" onclick="openWindow('win-bio'); toggleStartMenu();">
+        <span>📄</span>
+        <span>Founder Bio</span>
+      </button>
+      <hr style="border: 0; border-top: 1px solid #272730; margin: 2px 0;">
+      <a href="mailto:shithinrams2001@gmail.com" class="start-item">
+        <span>✉️</span>
+        <span>Email Shithin</span>
+      </a>
+      <a href="https://www.linkedin.com/in/shithin-ram-158327246/" target="_blank" class="start-item">
+        <span>🔗</span>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://github.com/shithins/" target="_blank" class="start-item">
+        <span>🐙</span>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    /* ==========================================================================
+       1. WINDOW MANAGEMENT & DRAGGING
+       ========================================================================== */
+    let highestZ = 30;
+
+    function bringToFront(winId) {
+      const win = document.getElementById(winId);
+      if (!win) return;
+      highestZ += 1;
+      win.style.zIndex = highestZ;
+    }
+
+    function openWindow(winId) {
+      const win = document.getElementById(winId);
+      if (!win) return;
+      win.classList.remove('hidden');
+      bringToFront(winId);
+      updateTaskTabs();
+      // The chase is continuous while its window is on screen.
+      if (winId === 'win-game' && typeof startGameLoop === 'function') {
+        restartGame();
+        startGameLoop('window');
+      }
+    }
+
+    function closeWindow(winId) {
+      const win = document.getElementById(winId);
+      if (!win) return;
+      win.classList.add('hidden');
+      updateTaskTabs();
+      if (winId === 'win-game' && typeof stopGameLoop === 'function') stopGameLoop();
+    }
+
+    function minimizeWindow(winId) {
+      closeWindow(winId);
+    }
+
+    function toggleWindow(winId) {
+      const win = document.getElementById(winId);
+      if (!win) return;
+      if (win.classList.contains('hidden')) {
+        openWindow(winId);
+      } else {
+        closeWindow(winId);
+      }
+    }
+
+    function toggleStartMenu() {
+      const menu = document.getElementById('start-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function toggleDropdown(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+
+    function toggleCRT() {
+      const crt = document.getElementById('crt-screen');
+      const ind = document.getElementById('crt-indicator');
+      crt.classList.toggle('off');
+      ind.textContent = crt.classList.contains('off') ? 'OFF' : 'ON';
+    }
+
+    // Window Dragging
+    let activeDrag = null;
+    let dragOffset = { x: 0, y: 0 };
+
+    function startDrag(e, winId) {
+      const win = document.getElementById(winId);
+      bringToFront(winId);
+      activeDrag = win;
+      const rect = win.getBoundingClientRect();
+      dragOffset.x = e.clientX - rect.left;
+      dragOffset.y = e.clientY - rect.top;
+
+      document.addEventListener('mousemove', onDrag);
+      document.addEventListener('mouseup', stopDrag);
+    }
+
+    function onDrag(e) {
+      if (!activeDrag) return;
+      let x = e.clientX - dragOffset.x;
+      let y = e.clientY - dragOffset.y;
+      if (y < 30) y = 30; // Don't drag above menu bar
+      activeDrag.style.left = x + 'px';
+      activeDrag.style.top = y + 'px';
+    }
+
+    function stopDrag() {
+      activeDrag = null;
+      document.removeEventListener('mousemove', onDrag);
+      document.removeEventListener('mouseup', stopDrag);
+    }
+
+    // Close menus on desktop click
+    document.getElementById('desktop').addEventListener('click', (e) => {
+      document.getElementById('start-menu').classList.add('hidden');
+      document.getElementById('theme-menu').classList.add('hidden');
+    });
+
+    document.querySelectorAll('.retro-window').forEach(w => {
+      w.addEventListener('mousedown', () => bringToFront(w.id));
+    });
+
+    function updateTaskTabs() {
+      const tabs = [
+        { id: 'win-theblackit', tab: 'tab-theblackit' },
+        { id: 'win-services', tab: 'tab-services' },
+        { id: 'win-terminal', tab: 'tab-terminal' }
+      ];
+      tabs.forEach(item => {
+        const win = document.getElementById(item.id);
+        const tab = document.getElementById(item.tab);
+        if (win && tab) {
+          if (!win.classList.contains('hidden')) tab.classList.add('active');
+          else tab.classList.remove('active');
+        }
+      });
+    }
+
+    /* ==========================================================================
+       2. COLOR THEME SWITCHER
+       ========================================================================== */
+    function setTheme(themeName) {
+      document.body.setAttribute('data-theme', themeName);
+      document.getElementById('theme-menu').classList.add('hidden');
+      printToCli(`[SYSTEM] Switched theme palette to: ${themeName.toUpperCase()}`);
+    }
+
+    /* ==========================================================================
+       3. INTERACTIVE TERMINAL ENGINE (cd, ls, dir, cat, open, theme, help...)
+       ========================================================================== */
+    let currentDir = '/';
+    let commandHistory = [];
+    let historyIdx = -1;
+
+    const fileSystem = {
+      '/': {
+        'theblackit.hub': { type: 'exec', target: 'win-theblackit', desc: 'TheBlackit flagship innovation hub' },
+        'instructions.txt': { type: 'file', target: 'win-instructions', content: 'Open instructions window: type "open instructions" or read desktop manual.' },
+        'founder_bio.txt': { type: 'file', target: 'win-bio', content: 'Shithin Ram S — Product Builder, SEO Specialist, Entrepreneur. Co-Founder of TheBlackit.' },
+        'contact.msg': { type: 'file', target: 'win-contact', content: 'Email: shithinrams2001@gmail.com | Hub: https://theblackit.com' },
+        'snake_escape.exe': { type: 'exec', target: 'win-game', desc: 'Breakout snake desktop game' },
+        'products': { type: 'dir' }
+      },
+      '/products': {
+        'keeptime.app': { type: 'exec', target: 'win-keeptime', desc: 'HRM Chrome Extension (BYOD)' },
+        'clockroach.exe': { type: 'exec', target: 'win-clockroach', desc: 'Zero-overhead work time tracker' },
+        'braincrawl.app': { type: 'file', desc: 'Gamified digital marketing quiz extension' },
+        'doordiehabiter.apk': { type: 'file', desc: 'Social habit accountability app' }
+      }
+    };
+
+    function printToCli(text, isCommand = false) {
+      const output = document.getElementById('cli-output');
+      const div = document.createElement('div');
+      if (isCommand) {
+        div.innerHTML = `<span style="color: var(--accent);">${getPrompt()}</span> ${text}`;
+      } else {
+        div.innerHTML = text;
+      }
+      output.appendChild(div);
+      output.scrollTop = output.scrollHeight;
+    }
+
+    function getPrompt() {
+      return currentDir === '/' ? 'C:\\>' : `C:${currentDir.replace(/\//g, '\\').toUpperCase()}>`;
+    }
+
+    function handleCliSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('cli-input');
+      const cmdStr = input.value.trim();
+      input.value = '';
+      if (!cmdStr) return;
+
+      commandHistory.push(cmdStr);
+      historyIdx = commandHistory.length;
+
+      printToCli(cmdStr, true);
+      executeCommand(cmdStr);
+    }
+
+    function executeCommand(cmdStr) {
+      const parts = cmdStr.split(' ');
+      const cmd = parts[0].toLowerCase();
+      const arg = parts.slice(1).join(' ').trim();
+
+      switch (cmd) {
+        case 'help':
+          printToCli(`
+<span style="color: #fff; font-weight: bold;">AVAILABLE COMMANDS:</span>
+  <span style="color: var(--accent);">ls</span> or <span style="color: var(--accent);">dir</span>        - List files in current folder
+  <span style="color: var(--accent);">cd &lt;dir&gt;</span>           - Change directory (e.g. cd products, cd ..)
+  <span style="color: var(--accent);">cat &lt;file&gt;</span>         - Read a file
+  <span style="color: var(--accent);">open &lt;app&gt;</span>        - Launch window (e.g. open theblackit, open game)
+  <span style="color: var(--accent);">theme &lt;name&gt;</span>       - Change theme (crimson, matrix, amber, cyberpunk, classic95)
+  <span style="color: var(--accent);">whoami</span>             - Show founder profile
+  <span style="color: var(--accent);">services</span>           - Open engagements, process &amp; pricing models
+  <span style="color: var(--accent);">contact</span>            - Show contact links
+  <span style="color: var(--accent);">clear</span> or <span style="color: var(--accent);">cls</span>       - Clear terminal screen
+  <span style="color: var(--accent);">exit</span>               - Close terminal window
+          `);
+          break;
+
+        case 'ls':
+        case 'dir':
+          const currentFiles = fileSystem[currentDir] || {};
+          let listing = `<div style="color: #9ca3af; margin: 4px 0;">Directory of ${getPrompt()}</div>`;
+          for (let name in currentFiles) {
+            const item = currentFiles[name];
+            const typeStr = item.type === 'dir' ? '&lt;DIR&gt;' : 'FILE ';
+            listing += `<div>${typeStr} &nbsp; <span style="color: ${item.type === 'dir' ? '#fbbf24' : '#fff'};">${name}</span></div>`;
+          }
+          printToCli(listing);
+          break;
+
+        case 'cd':
+          if (!arg || arg === '/' || arg === '\\') {
+            currentDir = '/';
+          } else if (arg === '..' || arg === '../') {
+            currentDir = '/';
+          } else {
+            const target = arg.toLowerCase().replace(/^\/|\/$/g, '');
+            const newPath = currentDir === '/' ? `/${target}` : `${currentDir}/${target}`;
+            if (fileSystem[newPath]) {
+              currentDir = newPath;
+            } else {
+              printToCli(`<span style="color: #ef4444;">System error: Directory not found: ${arg}</span>`);
+            }
+          }
+          document.getElementById('cli-prompt-text').textContent = getPrompt();
+          break;
+
+        case 'cat':
+          if (!arg) {
+            printToCli('Usage: cat &lt;filename&gt;');
+            return;
+          }
+          const filesInDir = fileSystem[currentDir] || {};
+          const fileObj = filesInDir[arg.toLowerCase()];
+          if (fileObj) {
+            if (fileObj.type === 'dir') {
+              printToCli(`<span style="color: #ef4444;">${arg} is a directory. Use 'cd ${arg}' instead.</span>`);
+            } else {
+              printToCli(`<div style="color: #e4e4e7; border-left: 2px solid var(--accent); padding-left: 6px;">${fileObj.content || fileObj.desc || 'Binary file.'}</div>`);
+            }
+          } else {
+            printToCli(`<span style="color: #ef4444;">File not found: ${arg}</span>`);
+          }
+          break;
+
+        case 'open':
+        case 'run':
+          if (!arg) {
+            printToCli('Usage: open &lt;app_name&gt; (e.g. open theblackit, open game, open bio)');
+            return;
+          }
+          const appName = arg.toLowerCase();
+          if (appName.includes('blackit')) openWindow('win-theblackit');
+          else if (appName.includes('game') || appName.includes('snake')) openWindow('win-game');
+          else if (appName.includes('keep')) openWindow('win-keeptime');
+          else if (appName.includes('clock')) openWindow('win-clockroach');
+          else if (appName.includes('bio')) openWindow('win-bio');
+          else if (appName.includes('contact') || appName.includes('msg')) openWindow('win-contact');
+          else if (appName.includes('product')) openWindow('win-products');
+          else if (appName.includes('service') || appName.includes('audit') || appName.includes('engage')) openWindow('win-services');
+          else if (appName.includes('instruction') || appName.includes('guide')) openWindow('win-instructions');
+          else if (appName.includes('trash')) openWindow('win-trash');
+          else printToCli(`<span style="color: #ef4444;">Unknown application: ${arg}</span>`);
+          break;
+
+        case 'theme':
+          const tName = arg.toLowerCase();
+          if (['crimson', 'matrix', 'amber', 'cyberpunk', 'classic95'].includes(tName)) {
+            setTheme(tName);
+          } else {
+            printToCli('Valid themes: crimson, matrix, amber, cyberpunk, classic95');
+          }
+          break;
+
+        case 'whoami':
+          printToCli(`
+<div style="color: #fff;">
+  <strong>Shithin Ram S</strong><br>
+  &bull; Co-Founder @ TheBlackit (theblackit.com)<br>
+  &bull; SEO Team Lead @ Acodez IT Solutions<br>
+  &bull; Product Builder &amp; Technical SEO Specialist<br>
+  &bull; Kozhikode, Kerala, India
+</div>
+          `);
+          break;
+
+        case 'contact':
+          printToCli(`
+<div>
+  Email: <a href="mailto:shithinrams2001@gmail.com" style="color: #60a5fa;">shithinrams2001@gmail.com</a><br>
+  TheBlackit: <a href="https://theblackit.com" target="_blank" style="color: #60a5fa;">https://theblackit.com</a><br>
+  LinkedIn: <a href="https://www.linkedin.com/in/shithin-ram-158327246/" target="_blank" style="color: #60a5fa;">Shithin Ram</a><br>
+  GitHub: <a href="https://github.com/shithins/" target="_blank" style="color: #60a5fa;">@shithins</a>
+</div>
+          `);
+          break;
+
+        case 'services':
+        case 'audit':
+          openWindow('win-services');
+          printToCli(`
+<div style="color: #fff;">
+  <strong>Launching SERVICES.EXE…</strong><br>
+  <span style="color: #a1a1aa;">Three ways to engage: technical audit &amp; roadmap, fractional SEO leadership, SEO-first build or migration.</span><br>
+  <span style="color: #a1a1aa;">Every engagement opens with a 20-minute teardown — the three things I would fix first, hire or not.</span>
+</div>
+          `);
+          break;
+
+        case 'clear':
+        case 'cls':
+          document.getElementById('cli-output').innerHTML = '';
+          break;
+
+        case 'exit':
+          closeWindow('win-terminal');
+          break;
+
+        default:
+          printToCli(`<span style="color: #ef4444;">'${cmd}' is not recognized as an internal command. Type <span style="color: var(--accent); font-weight: bold;">help</span> for a list of commands.</span>`);
+      }
+    }
+
+    // Terminal History Navigation (Up/Down arrow keys)
+    document.getElementById('cli-input').addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowUp') {
+        if (historyIdx > 0) {
+          historyIdx--;
+          e.target.value = commandHistory[historyIdx] || '';
+        }
+      } else if (e.key === 'ArrowDown') {
+        if (historyIdx < commandHistory.length - 1) {
+          historyIdx++;
+          e.target.value = commandHistory[historyIdx] || '';
+        } else {
+          historyIdx = commandHistory.length;
+          e.target.value = '';
+        }
+      }
+    });
+
+    /* ==========================================================================
+       4. SNAKE ESCAPE: DESKTOP BREAKOUT ARCADE GAME
+
+       Motion runs on requestAnimationFrame with delta-time integration, so the
+       chase is continuous and frame-rate independent instead of only stepping
+       when a key is pressed.
+       ========================================================================== */
+    const RUNNER_MAX_SPEED = 240;   // px per second
+    const RUNNER_ACCEL = 1500;      // px per second squared
+    const SNAKE_CATCH_PX = 16;
+
+    const game = {
+      mode: 'idle',                 // 'idle' | 'window' | 'breakout'
+      rafId: null,
+      lastTs: 0,
+      keys: { up: false, down: false, left: false, right: false },
+      runner: { x: 40, y: 110, vx: 0, vy: 0 },
+      snake1: { x: 180, y: 40, speed: 64 },   // px per second
+      snake2: { x: 240, y: 180, speed: 92 },
+      arena: { w: 0, h: 0 }
+    };
+    let runnerPos = { x: 40, y: 110 };   // kept for the game-window renderer
+    let snake1Pos = { x: 180, y: 40 };
+    let snake2Pos = { x: 240, y: 180 };
+    let isBreakoutActive = false;
+    let desktopRunnerPos = { x: 0, y: 0 };
+    let desktopSnakes = [];
+    let gameLoopId = null;
+
+    function clearDesktopSnakes() {
+      desktopSnakes.forEach(s => { if (s.el && s.el.parentNode) s.el.parentNode.removeChild(s.el); });
+      desktopSnakes = [];
+    }
+
+    function stopGameLoop() {
+      if (game.rafId !== null) {
+        cancelAnimationFrame(game.rafId);
+        game.rafId = null;
+      }
+    }
+
+    function resetVelocities() {
+      game.runner.vx = 0;
+      game.runner.vy = 0;
+      game.keys = { up: false, down: false, left: false, right: false };
+    }
+
+    function measureArena() {
+      const arena = document.getElementById('game-canvas-area');
+      if (!arena) return false;
+      game.arena.w = Math.max(0, arena.clientWidth);
+      game.arena.h = Math.max(0, arena.clientHeight);
+      return game.arena.w > 0 && game.arena.h > 0;
+    }
+
+    function startGameLoop(mode) {
+      const wasRunning = game.rafId !== null;
+      game.mode = mode;
+      if (wasRunning) return;
+      game.lastTs = 0;
+      game.rafId = requestAnimationFrame(gameTick);
+    }
+
+    function gameTick(ts) {
+      const dt = game.lastTs ? Math.min((ts - game.lastTs) / 1000, 0.05) : 0;
+      game.lastTs = ts;
+
+      if (game.mode === 'window') tickWindowGame(dt);
+      else if (game.mode === 'breakout') tickBreakout(dt);
+      else { game.rafId = null; return; }
+
+      if (game.mode !== 'idle') game.rafId = requestAnimationFrame(gameTick);
+      else game.rafId = null;
+    }
+
+    function tickWindowGame(dt) {
+      if (!measureArena()) return;
+      const spr = 22;
+      const maxX = Math.max(0, game.arena.w - spr);
+      const maxY = Math.max(0, game.arena.h - spr);
+
+      // Ease towards the held direction, so starts and stops feel weighted.
+      let tx = 0, ty = 0;
+      if (game.keys.left) tx -= 1;
+      if (game.keys.right) tx += 1;
+      if (game.keys.up) ty -= 1;
+      if (game.keys.down) ty += 1;
+      if (tx && ty) { tx *= Math.SQRT1_2; ty *= Math.SQRT1_2; }
+
+      const targetVx = tx * RUNNER_MAX_SPEED;
+      const targetVy = ty * RUNNER_MAX_SPEED;
+      const step = RUNNER_ACCEL * dt;
+      game.runner.vx += Math.max(-step, Math.min(step, targetVx - game.runner.vx));
+      game.runner.vy += Math.max(-step, Math.min(step, targetVy - game.runner.vy));
+
+      const prevX = game.runner.x;
+      game.runner.x = Math.max(0, Math.min(maxX, game.runner.x + game.runner.vx * dt));
+      game.runner.y = Math.max(0, Math.min(maxY, game.runner.y + game.runner.vy * dt));
+
+      // Breakout gateway: leaving via the right edge inside the portal band.
+      const movedRight = game.runner.x > prevX;
+      if (movedRight && game.runner.x >= maxX - 1 && game.runner.y >= maxY * 0.25 && game.runner.y <= maxY * 0.75) {
+        triggerBreakout();
+        return;
+      }
+
+      [[game.snake1, 's1'], [game.snake2, 's2']].forEach(([snake]) => {
+        const dx = game.runner.x - snake.x;
+        const dy = game.runner.y - snake.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist > 0.001) {
+          snake.vx = (dx / dist) * snake.speed;
+          snake.vy = (dy / dist) * snake.speed;
+        }
+        snake.x = Math.max(0, Math.min(maxX, snake.x + snake.vx * dt));
+        snake.y = Math.max(0, Math.min(maxY, snake.y + snake.vy * dt));
+      });
+
+      snake1Pos = { x: game.snake1.x, y: game.snake1.y };
+      snake2Pos = { x: game.snake2.x, y: game.snake2.y };
+      runnerPos = { x: game.runner.x, y: game.runner.y };
+      updateInGameSprites();
+
+      // Caught when a snake's centre reaches the runner's centre, so the
+      // sprites actually touch before the round resets.
+      const hitRadius = SNAKE_CATCH_PX + 4;
+      const caught = Math.hypot(game.runner.x - game.snake1.x, game.runner.y - game.snake1.y) < hitRadius ||
+                     Math.hypot(game.runner.x - game.snake2.x, game.runner.y - game.snake2.y) < hitRadius;
+      if (caught) handleCaught();
+    }
+
+    function tickBreakout(dt) {
+      const sprW = 30, sprH = 30;
+      let vx = 0, vy = 0;
+      if (game.keys.left) vx -= 1;
+      if (game.keys.right) vx += 1;
+      if (game.keys.up) vy -= 1;
+      if (game.keys.down) vy += 1;
+      if (vx && vy) { vx *= Math.SQRT1_2; vy *= Math.SQRT1_2; }
+
+      desktopRunnerPos.x = Math.max(0, Math.min(window.innerWidth - sprW, desktopRunnerPos.x + vx * 300 * dt));
+      desktopRunnerPos.y = Math.max(30, Math.min(window.innerHeight - sprH, desktopRunnerPos.y + vy * 300 * dt));
+
+      const runnerEl = document.getElementById('desktop-runner');
+      if (runnerEl) {
+        runnerEl.style.left = desktopRunnerPos.x + 'px';
+        runnerEl.style.top = desktopRunnerPos.y + 'px';
+      }
+
+      let caught = false;
+      desktopSnakes.forEach(s => {
+        const dx = desktopRunnerPos.x - s.x;
+        const dy = desktopRunnerPos.y - s.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist > 0.001) {
+          s.vx = (dx / dist) * s.speed;
+          s.vy = (dy / dist) * s.speed;
+        }
+        s.x += s.vx * dt;
+        s.y += s.vy * dt;
+        if (s.el) {
+          s.el.style.left = s.x + 'px';
+          s.el.style.top = s.y + 'px';
+        }
+        if (Math.hypot(desktopRunnerPos.x - s.x, desktopRunnerPos.y - s.y) < 26) caught = true;
+      });
+
+      if (caught) {
+        game.mode = 'idle';
+        stopGameLoop();
+        alert('💀 CAUGHT ON THE DESKTOP BY A CRAWL SNAKE! Try escaping again!');
+        restartGame();
+        return;
+      }
+
+      const trash = document.getElementById('desktop-trash-icon');
+      if (trash) {
+        const r = trash.getBoundingClientRect();
+        if (desktopRunnerPos.x >= r.left - 20 && desktopRunnerPos.x <= r.right + 20 &&
+            desktopRunnerPos.y >= r.top - 20 && desktopRunnerPos.y <= r.bottom + 20) {
+          triggerVictory();
+        }
+      }
+    }
+
+    function handleCaught() {
+      game.mode = 'idle';
+      stopGameLoop();
+      alert('💥 CAUGHT BY ALGORITHM CRAWL SNAKE! Resetting game...');
+      restartGame();
+    }
+
+    function restartGame() {
+      game.mode = 'idle';
+      stopGameLoop();
+      resetVelocities();
+
+      game.runner = { x: 40, y: 110, vx: 0, vy: 0 };
+      game.snake1 = { x: 180, y: 40, speed: 64 };
+      game.snake2 = { x: 240, y: 180, speed: 92 };
+      runnerPos = { x: 40, y: 110 };
+      snake1Pos = { x: 180, y: 40 };
+      snake2Pos = { x: 240, y: 180 };
+
+      isBreakoutActive = false;
+      const overlay = document.getElementById('breakout-overlay');
+      if (overlay) overlay.classList.remove('active');
+      const trashIcon = document.getElementById('desktop-trash-icon');
+      if (trashIcon) trashIcon.classList.remove('trash-target-glow');
+
+      clearDesktopSnakes();
+
+      // If the game window is open and visible, resume the chase right away.
+      const winGame = document.getElementById('win-game');
+      if (winGame && !winGame.classList.contains('hidden')) startGameLoop('window');
+
+      updateInGameSprites();
+    }
+
+    function updateInGameSprites() {
+      const runner = document.getElementById('in-game-runner');
+      const s1 = document.getElementById('in-game-snake1');
+      const s2 = document.getElementById('in-game-snake2');
+      if (runner) { runner.style.left = runnerPos.x + 'px'; runner.style.top = runnerPos.y + 'px'; }
+      if (s1) { s1.style.left = snake1Pos.x + 'px'; s1.style.top = snake1Pos.y + 'px'; }
+      if (s2) { s2.style.left = snake2Pos.x + 'px'; s2.style.top = snake2Pos.y + 'px'; }
+    }
+
+    // Held-key tracking: the loop reads these, so the runner keeps moving
+    // between keydown repeats.
+    window.addEventListener('keydown', (e) => {
+      const winGame = document.getElementById('win-game');
+      const gameVisible = winGame && !winGame.classList.contains('hidden');
+      if (!gameVisible && !isBreakoutActive) return;
+      if (document.activeElement === document.getElementById('cli-input')) return;
+
+      const k = e.key;
+      let handled = true;
+      if (k === 'ArrowUp' || k === 'w' || k === 'W') game.keys.up = true;
+      else if (k === 'ArrowDown' || k === 's' || k === 'S') game.keys.down = true;
+      else if (k === 'ArrowLeft' || k === 'a' || k === 'A') game.keys.left = true;
+      else if (k === 'ArrowRight' || k === 'd' || k === 'D') game.keys.right = true;
+      else handled = false;
+
+      if (handled) {
+        e.preventDefault();
+        if (game.rafId === null) startGameLoop(isBreakoutActive ? 'breakout' : 'window');
+      }
+    });
+
+    window.addEventListener('keyup', (e) => {
+      const k = e.key;
+      if (k === 'ArrowUp' || k === 'w' || k === 'W') game.keys.up = false;
+      else if (k === 'ArrowDown' || k === 's' || k === 'S') game.keys.down = false;
+      else if (k === 'ArrowLeft' || k === 'a' || k === 'A') game.keys.left = false;
+      else if (k === 'ArrowRight' || k === 'd' || k === 'D') game.keys.right = false;
+    });
+
+    // Never keep accelerating after the window loses focus.
+    window.addEventListener('blur', resetVelocities);
+
+    function triggerBreakout() {
+      isBreakoutActive = true;
+      const winGame = document.getElementById('win-game');
+      const winRect = winGame.getBoundingClientRect();
+
+      // Start the runner just outside the window boundary.
+      desktopRunnerPos = { x: winRect.right + 10, y: winRect.top + 80 };
+      const overlay = document.getElementById('breakout-overlay');
+      overlay.classList.add('active');
+
+      const runnerEl = document.getElementById('desktop-runner');
+      runnerEl.style.left = desktopRunnerPos.x + 'px';
+      runnerEl.style.top = desktopRunnerPos.y + 'px';
+
+      document.getElementById('desktop-trash-icon').classList.add('trash-target-glow');
+
+      spawnDesktopSnakes();
+
+      printToCli('<span style="color: #fb7185; font-weight: bold;">🚨 SECURITY BREACH: RUNNER BROKE OUT ONTO DESKTOP! RUN TO THE TRASH BIN (🗑️)!</span>');
+
+      startGameLoop('breakout');
+    }
+
+    function spawnDesktopSnakes() {
+      clearDesktopSnakes();
+      desktopSnakes = [
+        { el: null, x: 20, y: 50, speed: 130, vx: 0, vy: 0 },
+        { el: null, x: window.innerWidth - 50, y: 80, speed: 115, vx: 0, vy: 0 },
+        { el: null, x: window.innerWidth / 2, y: window.innerHeight - 80, speed: 150, vx: 0, vy: 0 },
+        { el: null, x: 40, y: window.innerHeight - 100, speed: 105, vx: 0, vy: 0 }
+      ];
+
+      const overlay = document.getElementById('breakout-overlay');
+      desktopSnakes.forEach(s => {
+        const div = document.createElement('div');
+        div.className = 'desktop-snake';
+        div.textContent = '🐍';
+        div.style.left = s.x + 'px';
+        div.style.top = s.y + 'px';
+        overlay.appendChild(div);
+        s.el = div;
+      });
+    }
+
+    function checkHit(p1, p2, dist) {
+      const dx = p1.x - p2.x;
+      const dy = p1.y - p2.y;
+      return Math.sqrt(dx * dx + dy * dy) < dist;
+    }
+
+    function triggerVictory() {
+      game.mode = 'idle';
+      stopGameLoop();
+      isBreakoutActive = false;
+      document.getElementById('breakout-overlay').classList.remove('active');
+      document.getElementById('desktop-trash-icon').classList.remove('trash-target-glow');
+
+      printToCli('<span style="color: #34d399; font-weight: bold;">🎉 VICTORY! All crawl bugs &amp; snakes dumped in Trash! Mission complete.</span>');
+      openWindow('win-trash');
+      alert('🏆 ESCAPE SUCCESSFUL!\n\nYou broke out of the game window, navigated the OS desktop, and dumped all the algorithmic snakes safely into the Trash Bin!\n\nRank #1 achieved!');
+      restartGame();
+    }
+
+    /* ==========================================================================
+       5. SIMULATED CRAWL GRAPH ANIMATION & LIVE CLOCKS
+       ========================================================================== */
+    function initCrawlGraph() {
+      const container = document.getElementById('crawl-bars');
+      if (!container) return;
+      container.innerHTML = '';
+      const numBars = 36;
+      const idleHeights = [];
+      for (let i = 0; i < numBars; i++) {
+        const bar = document.createElement('div');
+        bar.className = 'crawl-bar';
+        /* A fixed silhouette, so the wave sits still until it is asked to play. */
+        const h = Math.round(8 + Math.abs(Math.sin(i * 0.75)) * 26 + Math.random() * 8);
+        idleHeights.push(h);
+        bar.style.height = h + 'px';
+        container.appendChild(bar);
+      }
+
+      const audio = document.getElementById('wave-audio');
+      const hint = document.getElementById('wave-hint');
+      const bars = container.querySelectorAll('.crawl-bar');
+      let tickerId = null;
+
+      function setPlaying(on) {
+        container.classList.toggle('playing', on);
+        container.setAttribute('aria-pressed', on ? 'true' : 'false');
+        container.setAttribute('aria-label', on ? 'Pause the theme tune' : 'Play the theme tune and animate the graph');
+        container.title = on ? 'Click to pause' : 'Click to play';
+        if (hint) hint.textContent = on ? '\u23F8 PLAYING \u2014 CLICK TO STOP' : '\u25B6 CLICK THE WAVE TO PLAY';
+      }
+
+      function startBars() {
+        if (tickerId) return;
+        tickerId = setInterval(() => {
+          bars.forEach(bar => {
+            bar.style.height = (Math.random() * 34 + 6) + 'px';
+          });
+        }, 150);
+      }
+
+      function stopBars() {
+        clearInterval(tickerId);
+        tickerId = null;
+        bars.forEach((bar, i) => { bar.style.height = idleHeights[i] + 'px'; });
+      }
+
+      function toggleWave() {
+        if (!audio) return;
+        if (audio.paused) {
+          const attempt = audio.play();
+          if (attempt && attempt.catch) {
+            attempt.catch(() => {
+              setPlaying(false);
+              stopBars();
+              if (hint) hint.textContent = '\u26A0 AUDIO BLOCKED \u2014 CLICK AGAIN';
+            });
+          }
+        } else {
+          audio.pause();
+        }
+      }
+
+      if (audio) {
+        audio.addEventListener('play', () => { setPlaying(true); startBars(); });
+        audio.addEventListener('pause', () => { setPlaying(false); stopBars(); });
+        audio.addEventListener('ended', () => { setPlaying(false); stopBars(); });
+        audio.addEventListener('error', () => {
+          setPlaying(false);
+          stopBars();
+          if (hint) hint.textContent = '\u26A0 AUDIO UNAVAILABLE';
+        });
+      }
+
+      container.addEventListener('click', toggleWave);
+      container.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleWave();
+        }
+      });
+
+      setPlaying(false);
+    }
+
+    function updateClocks() {
+      const d = new Date();
+      const ist = new Date(d.getTime() + (d.getTimezoneOffset() * 60000) + (3600000 * 5.5));
+      const str = ist.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' IST';
+      const fullStr = ist.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' IST';
+
+      const top = document.getElementById('top-clock');
+      const bottom = document.getElementById('bottom-clock');
+      if (top) top.textContent = fullStr;
+      if (bottom) bottom.textContent = str;
+    }
+
+    setInterval(updateClocks, 1000);
+    updateClocks();
+    initCrawlGraph();
+    restartGame();
+  </script>
 </body>
 </html>

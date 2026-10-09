@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/projects.html", "destination": "/index.html#products", "permanent": true },
+    { "source": "/cinema.html", "destination": "/index.html", "permanent": true },
+    { "source": "/about.html", "destination": "/index.html", "permanent": true }
+  ]
+}

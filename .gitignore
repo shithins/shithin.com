@@ -1,2 +1,8 @@
 *.zip
 .DS_Store
+
+# Audio for the desktop wave is not tracked: the original was commercial
+# copyrighted music. Drop a licensed track in as assets/audio/the-sign.mp3.
+# The player degrades gracefully and shows "AUDIO UNAVAILABLE" if it is absent.
+assets/audio/*.mp3
+!assets/audio/README.md
