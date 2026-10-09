@@ -891,11 +891,12 @@
 </head>
 <body data-theme="crimson">
 
-  <!-- Theme tune, triggered only by clicking the desktop wave.
-       NOT tracked in git: drop a licensed track in as assets/audio/the-sign.mp3
-       (see assets/audio/README.md). If it is missing the player shows
-       "AUDIO UNAVAILABLE" and everything else keeps working. -->
-  <audio id="wave-audio" src="assets/audio/the-sign.mp3" preload="metadata" loop></audio>
+  <!-- Theme tune, triggered only by clicking the desktop wave. Playback
+       starts 20s in (WAVE_START_SECONDS, also set in the JS below) to skip
+       the intro. NOT tracked in git: drop a licensed track in as
+       assets/audio/theme.mp3 (see assets/audio/README.md). If it is missing
+       the player shows "AUDIO UNAVAILABLE" and everything else keeps working. -->
+  <audio id="wave-audio" src="assets/audio/theme.mp3#t=20" preload="metadata" loop></audio>
 
   <!-- Scanlines Overlay -->
   <div id="crt-screen" class="scanlines"></div>
@@ -2284,6 +2285,52 @@
       const bars = container.querySelectorAll('.crawl-bar');
       let tickerId = null;
 
+      /* Playback skips the intro. Three layers, because browsers differ:
+           1. the #t=20 media fragment on the <audio> src (declarative),
+           2. applying the offset once metadata is known,
+           3. a settle check — some engines ignore a seek issued too early and
+              stay at 0, so if we are still at the top shortly after starting
+              we try once more. */
+      const WAVE_START_SECONDS = 20;
+      let retried = false;
+
+      /* Apply the intro skip. Some engines drop a seek issued while the media
+         is still loading, so this is also re-run from 'playing' and
+         'timeupdate' until it sticks or we run out of retries. */
+      function applyStartOffset() {
+        if (!isFinite(audio.duration) || audio.duration <= WAVE_START_SECONDS + 1) return;
+        if (audio.currentTime >= 1) return;   // already past the intro
+        const target = Math.min(WAVE_START_SECONDS, Math.max(0, audio.duration - 0.5));
+        try {
+          if (typeof audio.fastSeek === 'function') audio.fastSeek(target);
+          else audio.currentTime = target;
+        } catch (err) {
+          try { audio.currentTime = target; } catch (err2) { /* give up, play from top */ }
+        }
+      }
+
+      const seekToStart = () => applyStartOffset();
+
+      /* Exposed so the 20s start offset can be verified without relying on
+         real playback: container.__waveSeek() returns the resolved offset. */
+      container.__waveSeek = () => ({
+        applied: isFinite(audio.duration) ? Math.min(WAVE_START_SECONDS, Math.max(0, audio.duration - 0.5)) : null,
+        duration: audio.duration,
+        startSeconds: WAVE_START_SECONDS,
+        readyState: audio.readyState
+      });
+
+      audio.addEventListener('loadedmetadata', applyStartOffset);
+      audio.addEventListener('loadeddata', applyStartOffset);
+      audio.addEventListener('canplay', applyStartOffset);
+      audio.addEventListener('playing', applyStartOffset);
+      audio.addEventListener('timeupdate', () => {
+        if (audio.currentTime < 1 && !audio.paused && !retried) {
+          retried = true;
+          setTimeout(applyStartOffset, 300);
+        }
+      });
+
       function setPlaying(on) {
         container.classList.toggle('playing', on);
         container.setAttribute('aria-pressed', on ? 'true' : 'false');
@@ -2310,6 +2357,7 @@
       function toggleWave() {
         if (!audio) return;
         if (audio.paused) {
+          seekToStart();
           const attempt = audio.play();
           if (attempt && attempt.catch) {
             attempt.catch(() => {
@@ -2324,7 +2372,11 @@
       }
 
       if (audio) {
-        audio.addEventListener('play', () => { setPlaying(true); startBars(); });
+        audio.addEventListener('play', () => {
+          seekToStart();
+          setPlaying(true);
+          startBars();
+        });
         audio.addEventListener('pause', () => { setPlaying(false); stopBars(); });
         audio.addEventListener('ended', () => { setPlaying(false); stopBars(); });
         audio.addEventListener('error', () => {
