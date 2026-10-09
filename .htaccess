@@ -1,0 +1,32 @@
+# shithin.com — Hostinger (LiteSpeed/Apache)
+#
+# Staging markers: while this tree is served from os.shithin.com it is a
+# duplicate of the main site, so keep it out of search results. REMOVE the
+# X-Robots-Tag block below when this design is promoted to the main domain.
+
+# Correct MIME types so the wave's audio element can seek (Range requests).
+AddType audio/mpeg .mp3
+AddType image/svg+xml .svg
+
+# Long-cache the heavy, immutable asset so the 7 MB track is not re-fetched.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType audio/mpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(mp3|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+# gzip/brotli the HTML text (it is the whole app: markup, CSS and JS).
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
+
+# --- staging only: delete this block when going live on the main domain ---
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
