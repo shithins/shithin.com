@@ -1,0 +1,848 @@
+/* ==========================================================================
+   shithin.com — High-Class Nature & Glass Design System
+   Inspired by Verdant, Outloud, and the "WANDER" Nature-Cloud Composition
+   Typography: Newsreader (Editorial Serif) + Plus Jakarta Sans + JetBrains Mono
+   ========================================================================== */
+
+:root {
+  /* Ink & Dark Verdant Canvas */
+  --ink: #050806;
+  --ink-2: #090e0b;
+  --ink-3: #0f1612;
+  --ink-card: rgba(12, 19, 14, 0.75);
+
+  /* Verdant Accents */
+  --lime: #86efac;
+  --lime-2: #bbf7d0;
+  --emerald: #10b981;
+  --emerald-deep: #059669;
+  --lime-glow: rgba(134, 239, 172, 0.22);
+  --lime-soft: rgba(134, 239, 172, 0.08);
+
+  /* Text & Contrast */
+  --text: #f7faf7;
+  --text-2: #c8d3c9;
+  --text-3: #8a988c;
+  --text-4: #5a665c;
+
+  /* Premium Glass System */
+  --glass-bg: rgba(12, 20, 15, 0.7);
+  --glass-border: rgba(134, 239, 172, 0.16);
+  --glass-border-hover: rgba(134, 239, 172, 0.45);
+  --glass-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(134, 239, 172, 0.04);
+  --line: rgba(247, 250, 247, 0.08);
+  --line-2: rgba(247, 250, 247, 0.16);
+
+  /* Fonts */
+  --serif: 'Newsreader', ui-serif, Georgia, serif;
+  --sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --maxw: 1240px;
+  --gutter: clamp(20px, 4.5vw, 64px);
+  --section: clamp(80px, 10vw, 140px);
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html {
+  background: var(--ink);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  background-color: var(--ink);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.09) 0%, transparent 45%),
+    radial-gradient(circle at 10% 40%, rgba(16, 185, 129, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 90% 70%, rgba(134, 239, 172, 0.05) 0%, transparent 45%);
+  background-attachment: fixed;
+}
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; border-radius: 4px; }
+::selection { background: var(--lime); color: #051208; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+.wrap--wide { max-width: 1400px; margin: 0 auto; padding: 0 var(--gutter); }
+
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: var(--lime); color: var(--ink); padding: 12px 18px;
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
+}
+.skip:focus { left: 0; }
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+.display {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(48px, 8.5vw, 114px);
+  line-height: 1.0;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+}
+.display em, .h1 em, .h2 em {
+  font-style: italic;
+  font-weight: 300;
+}
+.glow-word {
+  color: var(--lime);
+  text-shadow: 0 0 25px rgba(134, 239, 172, 0.45);
+  font-style: italic;
+}
+.h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(38px, 6vw, 76px); line-height: 1.05; letter-spacing: -0.03em; color: #fff; }
+.h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(30px, 4.2vw, 54px); line-height: 1.1; letter-spacing: -0.025em; color: #fff; }
+.h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.5vw, 30px); line-height: 1.25; letter-spacing: -0.015em; color: #fff; }
+
+.lede { font-size: clamp(17px, 1.7vw, 21px); line-height: 1.6; color: var(--text-2); max-width: 62ch; }
+.body { color: var(--text-2); max-width: 62ch; font-size: 15.5px; line-height: 1.65; }
+.body strong { color: var(--text); font-weight: 600; }
+
+.label {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.label--lime { color: var(--lime); }
+
+/* --------------------------------------------------------------------------
+   Header Navigation — High-Class Floating Capsule
+   -------------------------------------------------------------------------- */
+.bar {
+  position: fixed;
+  inset: 20px 0 auto;
+  z-index: 100;
+  pointer-events: none;
+}
+.bar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.bar__nav-shell {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.6vw, 34px);
+  padding: 8px 18px 8px 24px;
+  border-radius: 999px;
+  background: rgba(12, 20, 15, 0.75);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.3s var(--ease);
+}
+.bar__nav-shell:hover {
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(134, 239, 172, 0.08);
+}
+.brand {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  white-space: nowrap;
+}
+.brand-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--lime);
+  box-shadow: 0 0 10px var(--lime);
+}
+.nav {
+  display: flex;
+  gap: clamp(14px, 1.8vw, 26px);
+  align-items: center;
+}
+.nav a {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-2);
+  transition: color 0.25s var(--ease);
+  position: relative;
+  white-space: nowrap;
+}
+.nav a:hover, .nav a[aria-current="page"] {
+  color: var(--lime-2);
+}
+.nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -5px;
+  height: 1.5px;
+  background: var(--lime);
+  box-shadow: 0 0 8px var(--lime);
+}
+.bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons & Pills
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.3s var(--ease-out), background 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  white-space: nowrap;
+  pointer-events: auto;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--glass-border-hover);
+  background: rgba(20, 32, 24, 0.75);
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(134, 239, 172, 0.15);
+}
+.btn--lime {
+  background: linear-gradient(135deg, #c7f9cc 0%, #86efac 55%, #4ade80 100%);
+  color: #051b0d;
+  font-weight: 700;
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px -10px rgba(134, 239, 172, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.btn--lime:hover {
+  background: linear-gradient(135deg, #dcfce7 0%, #99f6b4 55%, #5eead4 100%);
+  box-shadow: 0 16px 50px -10px rgba(134, 239, 172, 0.65);
+  color: #021408;
+}
+.btn--glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text);
+}
+.btn--sm { padding: 7px 15px; font-size: 12.5px; }
+.btn--lg { padding: 15px 32px; font-size: 15.5px; }
+
+/* --------------------------------------------------------------------------
+   Nature Hero Section
+   -------------------------------------------------------------------------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: clamp(140px, 18vh, 190px) 0 clamp(80px, 10vh, 110px);
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  filter: blur(12px) brightness(0.66) saturate(1.2);
+  transform: scale(1.08);
+}
+.hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(5, 8, 6, 0.35) 0%, rgba(5, 8, 6, 0.85) 75%, var(--ink) 100%),
+    linear-gradient(to bottom, rgba(5, 8, 6, 0.65) 0%, transparent 35%, transparent 65%, var(--ink) 100%);
+}
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  color: var(--lime);
+  margin-bottom: clamp(24px, 3.5vw, 36px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--lime);
+  position: relative;
+}
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 999px;
+  border: 1px solid var(--lime);
+  animation: pulse 2s infinite ease-out;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+.hero .display {
+  max-width: 17ch;
+  margin: 0 auto;
+}
+.hero__sub {
+  margin: clamp(22px, 3vw, 32px) auto 0;
+  max-width: 60ch;
+  color: var(--text-2);
+  font-size: clamp(16px, 1.7vw, 19px);
+  line-height: 1.65;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+}
+.hero__cta-row {
+  margin-top: clamp(32px, 4.5vw, 46px);
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Verdant Glass Cards in Hero (Clean Alignment, Zero Overlap)
+   -------------------------------------------------------------------------- */
+.glass-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(18px, 2.5vw, 28px);
+  margin-top: clamp(60px, 8vw, 96px);
+  position: relative;
+  z-index: 2;
+}
+.glass-card {
+  background: rgba(12, 20, 15, 0.72);
+  backdrop-filter: blur(32px) saturate(190%);
+  -webkit-backdrop-filter: blur(32px) saturate(190%);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: clamp(28px, 3.2vw, 38px);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.35s var(--ease-out), border-color 0.3s var(--ease), box-shadow 0.35s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(134, 239, 172, 0.35), transparent);
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.75), 0 0 35px rgba(134, 239, 172, 0.14);
+}
+.glass-card__icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(134, 239, 172, 0.08);
+  border: 1px solid rgba(134, 239, 172, 0.2);
+  display: grid;
+  place-items: center;
+  color: var(--lime);
+  font-size: 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+.glass-card__eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 8px;
+}
+.glass-card__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(23px, 2.2vw, 27px);
+  letter-spacing: -0.015em;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+.glass-card__desc {
+  color: var(--text-2);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+/* Fixed Footer Row — Zero Text Collisions */
+.glass-card__footer {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.glass-card__footer-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.glass-card__pill {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(134, 239, 172, 0.08);
+  border: 1px solid rgba(134, 239, 172, 0.25);
+  color: var(--lime);
+  white-space: nowrap;
+}
+.glass-card__note {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+}
+
+/* --------------------------------------------------------------------------
+   Body Sections — High-Class Frosted Glass Cards
+   -------------------------------------------------------------------------- */
+section {
+  padding: var(--section) 0 0;
+  position: relative;
+}
+.sec-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+.sec-head__body { max-width: 62ch; }
+.sec-head .h2 { margin-top: 16px; }
+
+/* In-House Products Cards */
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px, 3vw, 32px);
+}
+.prod-card {
+  background: rgba(12, 20, 15, 0.72);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: clamp(30px, 3.6vw, 42px);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  position: relative;
+  box-shadow: var(--glass-shadow);
+}
+.prod-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(134, 239, 172, 0.1);
+}
+.prod-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+.prod-card__title {
+  font-family: var(--serif);
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-top: 6px;
+}
+.prod-card__desc {
+  color: var(--text-2);
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 26px;
+}
+.prod-card__footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.prod-card__tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.prod-card__link {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lime);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.prod-card__link:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* Feature Spotlight Card */
+.spotlight-card {
+  background: rgba(12, 20, 15, 0.72);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  padding: clamp(36px, 5vw, 60px);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Capabilities 4-column minimal pill grid */
+.cap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+.cap-item {
+  background: rgba(12, 20, 15, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.cap-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--glass-border-hover);
+}
+.cap-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--lime);
+  letter-spacing: 0.1em;
+}
+.cap-title {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+.cap-desc {
+  font-size: 13.5px;
+  color: var(--text-3);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   THE "WANDER" FOOTER
+   One dark landscape with the giant wordmark resting on the horizon, then a
+   single hairline link bar. The scene is a pre-composed image
+   (img/footer-scene.webp) whose sky is graded dark exactly where the letters
+   sit, so the type is legible by construction rather than by shadow.
+   -------------------------------------------------------------------------- */
+.wander-footer {
+  position: relative;
+  background: var(--ink);
+  overflow: hidden;
+  padding: 0 0 44px;
+  margin-top: clamp(80px, 12vw, 150px);
+}
+
+.wander-scene {
+  position: relative;
+  width: 100%;
+  /* 2:1 — the same proportion as img/footer-scene.webp, so the scene's zones
+     land where they are meant to at every width. */
+  height: clamp(300px, 50vw, 640px);
+  overflow: hidden;
+}
+
+/* The composed landscape. Explicitly stretched to fill the box rather than
+   `cover`d: a cover crop is what pushed the bright cumulus bank out of the
+   visible window before, leaving the footer showing nothing but dark sky. */
+.wander-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/footer-scene.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: contrast(1.04) saturate(1.06);
+}
+
+/* Melt the top of the scene into the page so the footer has no hard start line. */
+.wander-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    var(--ink) 0%,
+    rgba(5, 8, 6, 0.85) 4%,
+    rgba(5, 8, 6, 0) 13%);
+  pointer-events: none;
+}
+
+/* ---- The giant wordmark -------------------------------------------------- */
+.wander-letters {
+  position: absolute;
+  top: 2%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.wander-text {
+  font-family: var(--sans);
+  font-weight: 900;
+  /* Scaled so the ten characters span ~60-85% of the frame. The minimum has to
+     be small: any size that grows faster than the viewport makes the nowrap
+     wordmark run to the very edges (or past them) on a phone. */
+  font-size: clamp(17px, 10vw, 148px);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  /* Resting on the horizon: a whisper of warm rim light, never a glow. */
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.16),
+    0 14px 44px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- Micro-label ribbon along the foot of the landscape ------------------ */
+.wander-labels {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 0 var(--gutter);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #c2cfc4;
+  flex-wrap: wrap;
+}
+.wander-label-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.95);
+}
+.wander-label-item span {
+  color: var(--lime);
+}
+.wander-label-btn {
+  padding: 5px 15px;
+  border-radius: 999px;
+  border: 1px solid rgba(134, 239, 172, 0.5);
+  color: var(--lime);
+  background: rgba(5, 8, 6, 0.42);
+  backdrop-filter: blur(8px);
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+}
+.wander-label-btn:hover {
+  background: var(--lime);
+  color: #04120a;
+}
+
+/* ---- One quiet link bar -------------------------------------------------- */
+.wander-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(14px, 3vw, 40px);
+  padding: 30px 0 24px;
+  border-bottom: 1px solid var(--line);
+}
+.wander-links a {
+  position: relative;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  transition: color 0.25s var(--ease);
+}
+.wander-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 1px;
+  background: var(--lime);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+.wander-links a:hover {
+  color: var(--lime-2);
+}
+.wander-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---- Bottom bar ---------------------------------------------------------- */
+.wander-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding-top: 22px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  flex-wrap: wrap;
+}
+/* Secondary, not illegible: inherits the bottom bar's --text-3 (6.66:1) rather
+   than --text-4, which only reaches 3.34:1 on the ink background. */
+.wander-footer__tag {
+  opacity: 0.9;
+}
+.wander-footer__meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.beyond-social {
+  display: flex;
+  gap: 16px;
+}
+.beyond-social a {
+  color: var(--text-3);
+  transition: color 0.25s var(--ease);
+}
+.beyond-social a:hover {
+  color: var(--lime);
+}
+
+/* --------------------------------------------------------------------------
+   Subpage Headers
+   -------------------------------------------------------------------------- */
+.phero {
+  position: relative;
+  padding: clamp(150px, 20vw, 220px) 0 clamp(54px, 8vw, 90px);
+  overflow: hidden;
+  background: var(--ink);
+}
+.phero__inner { position: relative; z-index: 1; }
+.phero .label { margin-bottom: 20px; }
+.phero .h1 { max-width: 22ch; }
+.phero__sub { margin-top: 24px; }
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .glass-grid { grid-template-columns: 1fr; }
+  .cap-grid { grid-template-columns: repeat(2, 1fr); }
+  .wander-labels { justify-content: center; text-align: center; gap: 12px; }
+  .wander-labels .wander-label-item:nth-child(2),
+  .wander-labels .wander-label-item:nth-child(4) { display: none; }
+}
+@media (max-width: 768px) {
+  .bar .wrap { justify-content: center; }
+  .nav { display: none; }
+  .prod-grid { grid-template-columns: 1fr; }
+  .cap-grid { grid-template-columns: 1fr; }
+  .sec-head { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .wander-scene { height: clamp(240px, 52vw, 420px); }
+  .wander-labels .wander-label-item:nth-child(1) { display: none; }
+  .wander-footer__bottom { flex-direction: column; align-items: center; text-align: center; }
+}

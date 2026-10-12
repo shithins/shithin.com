@@ -10,7 +10,11 @@ Production hosts (Netlify, Vercel, Cloudflare, S3) all support Range, so this
 only affects local testing.
 
 Usage:
-    python3 serve.py [port]      # default 8099
+    python3 serve.py [port]      # serves the CURRENT directory, default port 8099
+
+Serve a subfolder by running it from there:
+
+    cd prototype && python3 ../serve.py 8130
 
 Note: the media files under assets/audio are gitignored, so a fresh clone needs
 a track dropped in before the wave will make a sound.
@@ -22,7 +26,9 @@ import re
 import socketserver
 import sys
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+# Serve the directory you launch from, not the directory holding this script,
+# so the same server can host the repo root or a subfolder like prototype/.
+ROOT = os.getcwd()
 DEFAULT_PORT = 8099
 
 

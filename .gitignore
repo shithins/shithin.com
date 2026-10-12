@@ -1,8 +1,14 @@
 *.zip
 .DS_Store
 
-# Audio for the desktop wave is not tracked: the original was commercial
-# copyrighted music. Drop a licensed track in as assets/audio/the-sign.mp3.
-# The player degrades gracefully and shows "AUDIO UNAVAILABLE" if it is absent.
+# Staging bundle for os.shithin.com — generated from the repo, holds the
+# untracked audio, so it must not be committed. Rebuild with the commands in
+# the deployment notes.
+deploy-os/
+
+# Audio for the desktop wave is not tracked: the tracks used have been
+# commercial copyrighted music. Drop a licensed track in as
+# assets/audio/theme.mp3. The player degrades gracefully and shows
+# "AUDIO UNAVAILABLE" if it is absent.
 assets/audio/*.mp3
 !assets/audio/README.md
