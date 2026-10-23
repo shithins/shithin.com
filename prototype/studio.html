@@ -15,87 +15,127 @@
 <meta property="og:url" content="https://shithin.com/studio.html">
 <meta property="og:site_name" content="Shithin Ram">
 <meta property="og:image" content="https://shithin.com/img/og.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#08090a">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
 <script>document.documentElement.className+=' js';</script>
 </head>
-<body>
+<body class="has-rail">
+<div class="progress" id="progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
-<header class="bar" id="bar">
-  <div class="wrap">
-    <div class="bar__nav-shell">
-      <a class="brand" href="./">
-        <span class="brand-dot"></span>
-        Shithin Ram
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="work.html">Work</a>
-        <a href="studio.html" aria-current="page">Studio</a>
-        <a href="cinema.html">Cinema</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="bar__actions">
-        <a class="btn btn--glass btn--sm" href="https://theblackit.com" target="_blank" rel="noopener noreferrer">theblackit.com ↗</a>
-        <a class="btn btn--lime btn--sm" href="https://os.shithin.com" target="_blank" rel="noopener noreferrer">ShithinOS ↗</a>
-      </div>
-    </div>
-  </div>
+<header class="topbar" id="bar">
+    <a class="wordmark" href="./">
+      <span class="wordmark__dot" aria-hidden="true"></span>
+      Shithin <em>Ram</em>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="work.html">Work</a>
+      <a href="cinema.html">Cinema</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 </header>
+<aside class="rail" aria-hidden="true">
+    <span class="rail__text">Field Notes — Shithin Ram — 11.2588° N / 75.7804° E</span>
+    <span class="rail__ticks">
+      <span class="rail__tick" data-rail-tick="1"></span>
+      <span class="rail__tick" data-rail-tick="2"></span>
+      <span class="rail__tick" data-rail-tick="3"></span>
+      <span class="rail__tick" data-rail-tick="4"></span>
+      <span class="rail__tick" data-rail-tick="5"></span>
+    </span>
+    <span class="rail__now" id="rail-now">I / Studio</span>
+</aside>
 <main id="main">
-  <section class="phero">
-    <div class="phero__inner wrap">
-      <span class="label label--lime">⚡ Background &amp; Story</span>
+  <section class="masthead" data-chapter="01">
+    <div class="masthead__bg" aria-hidden="true">
+      <img class="clim-img" src="img/forest-wide-02.webp" alt="" width="2200" height="1100">
+    </div>
+    <div class="fauna-field" data-fauna aria-hidden="true"></div>
+    <div class="masthead__inner wrap">
+      <div class="masthead__index">
+        <span class="masthead__no">I</span>
+        <span>Studio — biography</span>
+        <span>11.2588° N / 75.7804° E</span>
+      </div>
       <h1 class="h1">Who I am, what I believe, and <em>how I build</em>.</h1>
-      <p class="lede phero__sub">Product builder and technical SEO specialist based in Kozhikode, Kerala. Dedicated to quiet execution and sovereign craft.</p>
+      <p class="lede masthead__sub">Filmmaker first, technical SEO lead by trade, product builder by instinct. Kozhikode, Kerala.</p>
     </div>
   </section>
 
-  <section style="padding-top:0;">
+  <section class="chapter" style="padding-top: clamp(48px, 7vw, 90px);">
     <div class="wrap">
-      <div style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:clamp(32px, 5vw, 64px); align-items:start;">
-        <div style="background:var(--glass-bg); backdrop-filter:blur(24px); border:1px solid var(--glass-border); border-radius:24px; padding:clamp(28px, 4vw, 44px);">
-          <span class="label label--lime">The Journey</span>
-          <h2 class="h2" style="margin: 14px 0 24px;">From Computer Science to Enterprise Search Leadership.</h2>
-          <div class="body" style="display:flex; flex-direction:column; gap:16px;">
-            <p>
-              I graduated with a BSc in Computer Science, grounded in programming fundamentals, operating systems, and web architecture. Early on, I realized that writing code alone isn't enough if people cannot find what you build.
-            </p>
-            <p>
-              That led me deep into <strong>Technical SEO</strong> — not keyword stuffing or vanity metrics, but the hard engineering layer: crawl budgets, server logs, rendering performance, and structured entity graphs. Today, as <strong>SEO Team Lead at Acodez IT Solutions</strong>, I guide organic search strategy across global enterprises, outranking multi-billion-dollar SaaS players.
-            </p>
-            <p>
-              Simultaneously, together with close friends and collaborators, I co-founded <a href="https://theblackit.com" target="_blank" rel="noopener noreferrer" style="color:var(--lime); text-decoration:underline;">theblackit</a> — an independent product lab from Kerala where we incubate sovereign software, Chrome extensions, and community apps.
-            </p>
+      <div class="rule" style="margin-bottom: clamp(30px, 4vw, 52px);">
+        <span><span class="rule__num">01</span> — The Journey</span>
+        <span>Craft, trade, and the thing that came first</span>
+      </div>
+
+      <div class="spread">
+        <div class="spread__main" data-reveal>
+          <h2 class="h2">The film came first. The rest pays for <em>it</em>.</h2>
+        </div>
+        <div class="spread__aside body" data-reveal>
+          <p>I graduated with a BSc in Computer Science — programming fundamentals, operating systems, web architecture. Early on it became obvious that shipping was not the same as being visible.</p>
+          <p>That led me into <strong>technical SEO</strong>: not keyword stuffing or vanity metrics, but the hard engineering layer. Crawl budgets, server logs, rendering performance, structured entity graphs. Today, as <strong>SEO Team Lead at Acodez IT Solutions</strong>, I guide organic search strategy across global enterprises, outranking far larger competitors.</p>
+          <p>Alongside that, with close friends and collaborators, I co-founded
+            <a class="ital" href="https://theblackit.com" target="_blank" rel="noopener noreferrer">theblackit</a>
+            — an independent product lab from Kerala incubating sovereign software, Chrome extensions and community apps.</p>
+          <p>But the thing that came first, and the thing that will outlast the rest, is <strong>cinema</strong>. I write, direct and act — the stage, the set, the frame. Search and software are disciplines; this is the reason.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: clamp(56px, 8vw, 104px);">
+        <div class="rule" style="margin-bottom: 0;">
+          <span><span class="rule__num">02</span> — The Record</span>
+          <span>Roles &amp; years</span>
+        </div>
+        <div class="ledger">
+          <div class="ledger__row" data-reveal>
+            <span class="ledger__num">Always</span>
+            <span class="ledger__term">Creative director</span>
+            <span class="ledger__desc">Ekalavyan Studios. Directing, writing, acting and film criticism — the first thing, not the side thing.</span>
+          </div>
+          <div class="ledger__row" data-reveal>
+            <span class="ledger__num">2025—</span>
+            <span class="ledger__term">Co-founder &amp; builder</span>
+            <span class="ledger__desc"><a class="ital" href="https://theblackit.com" target="_blank" rel="noopener noreferrer">theblackit</a> — independent product lab. Sovereign software, extensions, community apps.</span>
+          </div>
+          <div class="ledger__row" data-reveal>
+            <span class="ledger__num">2022—</span>
+            <span class="ledger__term">SEO Team Lead</span>
+            <span class="ledger__desc">Acodez IT Solutions. Strategy, technical direction and reporting across global enterprise accounts.</span>
+          </div>
+          <div class="ledger__row" data-reveal>
+            <span class="ledger__num">Always</span>
+            <span class="ledger__term">Human</span>
+            <span class="ledger__desc">The part that watches the light change, keeps the notes, and still prefers the long way home through the trees.</span>
           </div>
         </div>
+      </div>
 
-        <div style="display:flex; flex-direction:column; gap:20px;">
-          <div style="background:var(--glass-bg); backdrop-filter:blur(24px); border:1px solid var(--glass-border); border-radius:20px; padding:28px;">
-            <span class="label label--lime">Key Roles</span>
-            <div style="margin-top:16px; display:flex; flex-direction:column; gap:14px;">
-              <div>
-                <strong style="color:var(--text); font-size:16px; display:block;">Co-Founder &amp; Builder</strong>
-                <a href="https://theblackit.com" target="_blank" rel="noopener noreferrer" style="font-family:var(--mono); font-size:12px; color:var(--lime);">theblackit.com ↗ (2024–Present)</a>
-              </div>
-              <div style="border-top:1px solid var(--line); padding-top:12px;">
-                <strong style="color:var(--text); font-size:16px; display:block;">SEO Team Lead</strong>
-                <span style="font-family:var(--mono); font-size:12px; color:var(--lime);">Acodez IT Solutions · 2022–Present</span>
-              </div>
-              <div style="border-top:1px solid var(--line); padding-top:12px;">
-                <strong style="color:var(--text); font-size:16px; display:block;">Creative Director</strong>
-                <span style="font-family:var(--mono); font-size:12px; color:var(--lime);">Ekalavyan Studios · Independent</span>
-              </div>
-            </div>
+      <div style="margin-top: clamp(56px, 8vw, 104px);">
+        <div class="rule" style="margin-bottom: 0;">
+          <span><span class="rule__num">03</span> — Ethos</span>
+          <span>How I work</span>
+        </div>
+        <div class="ledger">
+          <div class="ledger__row" data-reveal>
+            <span class="ledger__num">i.</span>
+            <span class="ledger__term">Verify, don't assume</span>
+            <span class="ledger__desc">Every claim should be checkable in production. Logs, field data, a crawl you can rerun. Opinions are cheap; evidence is not.</span>
           </div>
-
-          <div style="background:var(--glass-bg); backdrop-filter:blur(24px); border:1px solid var(--glass-border); border-radius:20px; padding:28px;">
-            <span class="label label--lime">Location &amp; Ethos</span>
-            <p class="body" style="font-size:14px; margin-top:12px;">
-              Based in Kozhikode, Kerala, India (UTC+5:30). Focused on building tools that solve immediate friction and creating cinema with narrative depth.
-            </p>
+          <div class="ledger__row" data-reveal>
+            <span class="ledger__num">ii.</span>
+            <span class="ledger__term">Subtract</span>
+            <span class="ledger__desc">Most sites have three real problems, not eighty. The job is choosing which three, and having the discipline to ignore the rest for now.</span>
+          </div>
+          <div class="ledger__row" data-reveal>
+            <span class="ledger__num">iii.</span>
+            <span class="ledger__term">Own the output</span>
+            <span class="ledger__desc">If the fix matters, write the ticket, review the implementation, and confirm it shipped. Handing over a PDF is not the end of the work.</span>
           </div>
         </div>
       </div>
@@ -103,46 +143,53 @@
   </section>
 </main>
 
-<footer class="wander-footer" id="wander-footer">
-  <!-- Landscape scene, with the giant wordmark resting on the horizon -->
-  <div class="wander-scene">
-    <div class="wander-bg" aria-hidden="true"></div>
-    <div class="wander-letters" aria-hidden="true">
-      <span class="wander-text">SHITHIN.COM</span>
-    </div>
-
-    <div class="wander-labels">
-      <div class="wander-label-item"><span>01</span> KOZHIKODE, KERALA</div>
-      <div class="wander-label-item">TECHNICAL SEO</div>
-      <div class="wander-label-item">THEBLACKIT PRODUCT LAB</div>
-      <div class="wander-label-item">SERENE IS THE SUMMIT</div>
-      <a class="wander-label-item wander-label-btn" href="work.html">EXPLORE WORK ↗</a>
-    </div>
+<footer class="colophon">
+  <div class="colophon__plate">
+    <div class="colophon__plate-img clim-img" aria-hidden="true"></div>
+    <div class="fauna-field" data-fauna aria-hidden="true"></div>
+    <div class="colophon__fin">Shithin <em>Ram</em></div>
+    <div class="colophon__plate-meta">Kozhikode, Kerala<br>11.2588° N / 75.7804° E</div>
   </div>
 
-  <!-- One quiet, evenly divided link bar instead of a four-column block -->
   <div class="wrap">
-    <nav class="wander-links" aria-label="Footer">
-      <a href="work.html">Work</a>
-      <a href="studio.html">Studio</a>
-      <a href="cinema.html">Cinema</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://theblackit.com" target="_blank" rel="noopener noreferrer">TheBlackit ↗</a>
-      <a href="https://os.shithin.com" target="_blank" rel="noopener noreferrer">ShithinOS '98 ↗</a>
-    </nav>
+    <div class="colophon__body">
+      <div>
+        <span class="label">Colophon</span>
+        <p class="colophon__name">Cinema first. Search by trade. Software by instinct.</p>
+        <p class="colophon__line">A journal kept in Kozhikode, on the Malabar coast — notes on films,
+          crawlers, and the tools in between.</p>
+      </div>
 
-    <div class="wander-footer__bottom">
-      <div>© <span id="yr">2026</span> Shithin Ram</div>
-      <div class="wander-footer__tag">Curiosity in code · Kozhikode, Kerala</div>
-      <div class="wander-footer__meta">
-        <span class="beyond-social">
-          <a href="https://github.com/shithins/" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/shithin-ram-158327246/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://www.youtube.com/@EkalavyansStudio" target="_blank" rel="noopener noreferrer">YouTube</a>
-          <a href="mailto:shithinrams2001@gmail.com">Email</a>
-        </span>
-        <span id="clock">--:--:--</span> IST
+      <div class="colophon__links">
+        <div class="colophon__col">
+          <h4>Index</h4>
+          <a href="work.html">Work</a>
+          <a href="studio.html">Studio</a>
+          <a href="services.html">Services</a>
+          <a href="cinema.html">Cinema</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="colophon__col">
+          <h4>Elsewhere</h4>
+          <a href="https://theblackit.com" target="_blank" rel="noopener noreferrer">TheBlackit ↗</a>
+          <a href="https://os.shithin.com" target="_blank" rel="noopener noreferrer">ShithinOS '98 ↗</a>
+          <a href="https://www.youtube.com/@EkalavyansStudio" target="_blank" rel="noopener noreferrer">Ekalavyan ↗</a>
+          <a href="https://github.com/shithins/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/shithin-ram-158327246/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://www.instagram.com/_shithin_s_/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="colophon__foot">
+      <span>© <span id="yr">2026</span> Shithin Ram</span>
+      <span>Kozhikode · <span id="clock">--:--:--</span> IST</span>
+      <div class="ambience" role="group" aria-label="Ambience">
+        <span class="ambience__label">Ambience</span>
+        <button type="button" data-ambience="auto" aria-pressed="true">Auto</button>
+        <button type="button" data-ambience="day" aria-pressed="false">Day</button>
+        <button type="button" data-ambience="night" aria-pressed="false">Night</button>
+        <button type="button" data-ambience="rain" aria-pressed="false">Rain</button>
       </div>
     </div>
   </div>

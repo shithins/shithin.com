@@ -12,3 +12,6 @@ deploy-os/
 # "AUDIO UNAVAILABLE" if it is absent.
 assets/audio/*.mp3
 !assets/audio/README.md
+
+# Local design-review screenshots (generated, not part of the site)
+prototype/.review/
