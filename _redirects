@@ -1,4 +1,6 @@
 # Netlify / Cloudflare Pages redirects (301 = permanent, preserves link equity)
+#
+# /cinema.html used to redirect to the homepage; it is a real page now, so the
+# redirect was removed when the new design was promoted to the main domain.
 /projects.html   /index.html#products   301
-/cinema.html     /index.html            301
 /about.html      /index.html            301

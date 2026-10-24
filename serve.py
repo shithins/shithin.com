@@ -27,7 +27,7 @@ import socketserver
 import sys
 
 # Serve the directory you launch from, not the directory holding this script,
-# so the same server can host the repo root or a subfolder like prototype/.
+# so the same server can host the repo root or any subfolder.
 ROOT = os.getcwd()
 DEFAULT_PORT = 8099
 

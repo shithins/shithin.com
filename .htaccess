@@ -1,32 +1,38 @@
 # shithin.com — Hostinger (LiteSpeed/Apache)
 #
-# Staging markers: while this tree is served from os.shithin.com it is a
-# duplicate of the main site, so keep it out of search results. REMOVE the
-# X-Robots-Tag block below when this design is promoted to the main domain.
+# Static site: six generated pages, one stylesheet, one script and a forest
+# image family. No server-side processing, no external runtime dependencies.
+#
+# The staging X-Robots-Tag block that used to live here was removed when this
+# design was promoted to the main domain.
 
-# Correct MIME types so the wave's audio element can seek (Range requests).
-AddType audio/mpeg .mp3
+# MIME types (Hostinger's defaults miss webp on some plans).
+AddType image/webp .webp
 AddType image/svg+xml .svg
 
-# Long-cache the heavy, immutable asset so the 7 MB track is not re-fetched.
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType audio/mpeg "access plus 1 year"
+  # Artwork is content-addressed by name and changes only on rebuild.
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 month"
+  # The stylesheet and script are NOT hashed, so keep them short-lived or a
+  # returning visitor keeps a stale design after a deploy.
+  ExpiresByType text/css "access plus 1 hour"
+  ExpiresByType application/javascript "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 
 <IfModule mod_headers.c>
-  <FilesMatch "\.(mp3|svg)$">
+  <FilesMatch "\.(webp|jpg|jpeg|svg)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+  Header set X-Content-Type-Options "nosniff"
 </IfModule>
 
-# gzip/brotli the HTML text (it is the whole app: markup, CSS and JS).
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
-</IfModule>
-
-# --- staging only: delete this block when going live on the main domain ---
-<IfModule mod_headers.c>
-  Header set X-Robots-Tag "noindex, nofollow"
 </IfModule>
