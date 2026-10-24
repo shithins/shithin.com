@@ -15,6 +15,7 @@ Design intent (see the header comment in css/site.css):
 Outputs *.html in the prototype root.
 """
 
+import json
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,9 +31,91 @@ NAV = [
 
 DESC = "Shithin Ram — filmmaker, technical SEO lead and co-founder of theblackit. Kozhikode, Kerala."
 COORD = "11.2588° N / 75.7804° E"
+SITE = "https://shithin.com"
+SOCIAL = [
+    "https://www.linkedin.com/in/shithin-ram-158327246/",
+    "https://www.instagram.com/_shithin_s_/",
+    "https://www.youtube.com/@EkalavyansStudio",
+    "https://github.com/shithins/",
+]
+PAGE_LABELS = {
+    "work.html": "Work",
+    "studio.html": "Studio",
+    "services.html": "Services",
+    "cinema.html": "Cinema",
+    "contact.html": "Contact",
+}
+
+
+def structured_data(title, desc, canonical):
+    """One JSON-LD graph per page: Person, Organization, WebSite, WebPage, breadcrumb.
+
+    The Person and WebSite nodes are identical everywhere; only the WebPage and
+    BreadcrumbList change per page, so search engines get a consistent entity
+    description for "Shithin Ram" from any URL.
+    """
+    page_url = SITE + "/" + canonical
+    graph = [
+        {
+            "@type": "Person",
+            "@id": SITE + "/#person",
+            "name": "Shithin Ram",
+            "alternateName": "Shithin Ram S",
+            "url": SITE + "/",
+            "image": SITE + "/img/og.jpg",
+            "jobTitle": "SEO Team Lead",
+            "worksFor": {"@type": "Organization", "name": "Acodez IT Solutions"},
+            "memberOf": {"@id": "https://theblackit.com/#organization"},
+            "knowsAbout": [
+                "Technical SEO", "Core Web Vitals", "Generative engine optimisation",
+                "Search engine architecture", "Filmmaking", "Screenwriting", "Film criticism",
+            ],
+            "sameAs": SOCIAL,
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://theblackit.com/#organization",
+            "name": "theblackit",
+            "url": "https://theblackit.com",
+            "description": "Independent product studio in Kerala building sovereign software, browser extensions and community apps.",
+            "founder": {"@id": SITE + "/#person"},
+        },
+        {
+            "@type": "WebSite",
+            "@id": SITE + "/#website",
+            "url": SITE + "/",
+            "name": "Shithin Ram — Field Notes",
+            "inLanguage": "en",
+            "publisher": {"@id": SITE + "/#person"},
+        },
+        {
+            "@type": "WebPage",
+            "@id": page_url + "#webpage",
+            "url": page_url,
+            "name": title,
+            "description": desc,
+            "inLanguage": "en",
+            "isPartOf": {"@id": SITE + "/#website"},
+            "about": {"@id": SITE + "/#person"},
+            "primaryImageOfPage": {"@type": "ImageObject", "url": SITE + "/img/og.jpg"},
+        },
+    ]
+    if canonical:
+        graph.append({
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+                {"@type": "ListItem", "position": 2,
+                 "name": PAGE_LABELS.get(canonical, title.split(" — ")[0]),
+                 "item": page_url},
+            ],
+        })
+    return json.dumps({"@context": "https://schema.org", "@graph": graph},
+                      ensure_ascii=False, separators=(",", ":"))
 
 
 def head(title, desc, canonical, page_css=""):
+    ld = structured_data(title, desc, canonical)
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,15 +125,23 @@ def head(title, desc, canonical, page_css=""):
 <meta name="description" content="{desc}">
 <meta name="author" content="Shithin Ram S">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://shithin.com/{canonical}">
+<link rel="canonical" href="{SITE}/{canonical}">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:url" content="https://shithin.com/{canonical}">
+<meta property="og:url" content="{SITE}/{canonical}">
 <meta property="og:site_name" content="Shithin Ram">
-<meta property="og:image" content="https://shithin.com/img/og.webp">
+<meta property="og:image" content="{SITE}/img/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A dark forest clearing, lit by low light">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="{SITE}/img/og.jpg">
+<meta name="twitter:image:alt" content="A dark forest clearing, lit by low light">
 <meta name="theme-color" content="#08090a">
 <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,6 +149,7 @@ def head(title, desc, canonical, page_css=""):
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
 {page_css}<script>document.documentElement.className+=' js';</script>
+<script type="application/ld+json">{ld}</script>
 </head>
 <body class="has-rail">
 <div class="progress" id="progress" aria-hidden="true"></div>
@@ -314,20 +406,20 @@ def home():
     screening = """      <div class="screening screening--feature">
         <figure class="frame frame--drift" data-reveal>
           <div class="frame__media">
-            <img class="clim-img" src="img/frame-set-01.webp" alt="A film crew at work among trees, lit by lamps" width="1600" height="900">
+            <img class="clim-img" loading="lazy" decoding="async" src="img/frame-set-01.webp" alt="A film crew at work among trees, lit by lamps" width="1600" height="900">
             <div class="fauna-field" data-fauna aria-hidden="true"></div>
           </div>
           <figcaption><span class="frame__no">01</span><span>The set</span><span class="frame__tc">00:04:12</span></figcaption>
         </figure>
         <figure class="frame" data-reveal>
           <div class="frame__media">
-            <img class="clim-img" src="img/frame-set-02.webp" alt="A camera on a tripod, crew silhouetted behind the lights" width="1600" height="900">
+            <img class="clim-img" loading="lazy" decoding="async" src="img/frame-set-02.webp" alt="A camera on a tripod, crew silhouetted behind the lights" width="1600" height="900">
           </div>
           <figcaption><span class="frame__no">02</span><span>The camera</span><span class="frame__tc">00:11:38</span></figcaption>
         </figure>
         <figure class="frame" data-reveal>
           <div class="frame__media">
-            <img class="clim-img" src="img/frame-set-05.webp" alt="The night crew at the edge of the light" width="1600" height="900">
+            <img class="clim-img" loading="lazy" decoding="async" src="img/frame-set-05.webp" alt="The night crew at the edge of the light" width="1600" height="900">
           </div>
           <figcaption><span class="frame__no">03</span><span>The night crew</span><span class="frame__tc">00:18:05</span></figcaption>
         </figure>
@@ -421,7 +513,7 @@ def home():
       <div class="figure-spread">
         <figure class="frame frame--tall" data-reveal>
           <div class="frame__media">
-            <img class="clim-img" src="img/forest-tall.webp" alt="Sunlight through a moss-covered tree" width="1100" height="1500">
+            <img class="clim-img" loading="lazy" decoding="async" src="img/forest-tall.webp" alt="Sunlight through a moss-covered tree" width="1100" height="1500">
             <div class="fauna-field" data-fauna aria-hidden="true"></div>
           </div>
           <figcaption><span class="frame__no">04</span><span>Home ground, Kerala</span></figcaption>
@@ -876,20 +968,20 @@ def cinema_page():
       <div class="screening screening--feature">
         <figure class="frame frame--drift" data-reveal>
           <div class="frame__media">
-            <img class="clim-img" src="img/frame-set-01.webp" alt="A film crew at work among trees, lit by lamps" width="1600" height="900">
+            <img class="clim-img" loading="lazy" decoding="async" src="img/frame-set-01.webp" alt="A film crew at work among trees, lit by lamps" width="1600" height="900">
             <div class="fauna-field" data-fauna aria-hidden="true"></div>
           </div>
           <figcaption><span class="frame__no">01</span><span>The set</span><span class="frame__tc">00:04:12</span></figcaption>
         </figure>
         <figure class="frame" data-reveal>
           <div class="frame__media">
-            <img class="clim-img" src="img/frame-set-03.webp" alt="Crew and camera in lantern light" width="800" height="450">
+            <img class="clim-img" loading="lazy" decoding="async" src="img/frame-set-03.webp" alt="Crew and camera in lantern light" width="800" height="450">
           </div>
           <figcaption><span class="frame__no">02</span><span>The crew</span><span class="frame__tc">00:11:38</span></figcaption>
         </figure>
         <figure class="frame" data-reveal>
           <div class="frame__media">
-            <img class="clim-img" src="img/frame-set-04.webp" alt="A softbox lamp and the camera beside it" width="1600" height="900">
+            <img class="clim-img" loading="lazy" decoding="async" src="img/frame-set-04.webp" alt="A softbox lamp and the camera beside it" width="1600" height="900">
           </div>
           <figcaption><span class="frame__no">03</span><span>The lamp</span><span class="frame__tc">00:18:05</span></figcaption>
         </figure>
@@ -897,7 +989,7 @@ def cinema_page():
 
       <figure class="frame frame--drift" data-reveal style="margin-top: clamp(16px, 2.4vw, 28px);">
         <div class="frame__media" style="aspect-ratio: 21 / 9;">
-          <img class="clim-img" src="img/frame-set-wide.webp" alt="The whole set, in the trees at night" width="1600" height="686">
+          <img class="clim-img" loading="lazy" decoding="async" src="img/frame-set-wide.webp" alt="The whole set, in the trees at night" width="1600" height="686">
           <div class="fauna-field" data-fauna aria-hidden="true"></div>
         </div>
         <figcaption><span class="frame__no">04</span><span>The whole set</span><span class="frame__tc">00:23:47</span></figcaption>

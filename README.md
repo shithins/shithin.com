@@ -121,8 +121,8 @@ renders in its final state.
 | `_redirects` / `vercel.json` | Legacy URL redirects for Netlify/Cloudflare and Vercel |
 | `sitemap.xml`, `robots.txt` | Crawling |
 
-Archived, not linked: `index-minimal.html` (an earlier design), `about.html` and
-`projects.html` (redirect stubs retained for old inbound links), `assets/`.
+Archived, not linked: `about.html` and `projects.html` (redirect stubs retained
+for old inbound links) and `assets/`.
 
 ## About the imagery
 
@@ -158,6 +158,19 @@ When this design was promoted to the main domain, the staging
 `X-Robots-Tag: noindex` block was removed from `.htaccess` — **do not reintroduce
 it**, or the whole site disappears from search. The old `/cinema.html → /`
 redirect was also removed, because `/cinema.html` is a real page now.
+
+## SEO
+
+- Every page has a unique title and meta description, one `<h1>`, correct
+  absolutes canonicals, Open Graph and Twitter cards, and a JSON-LD graph
+  (`Person` + `Organization` + `WebSite` + `WebPage`, plus `BreadcrumbList` on
+  subpages) built in `structured_data()`.
+- `img/og.jpg` is a 1200×630 JPEG: WebP share previews are still unreliable on
+  some platforms, LinkedIn in particular.
+- Below-the-fold artwork is `loading="lazy"`; the overture and mastheads stay
+  eager (the overture with `fetchpriority="high"`) so LCP is not deferred.
+- `sitemap.xml` lists all six pages, `robots.txt` allows crawling, and legacy
+  `/about.html` and `/projects.html` redirect home.
 
 ## Notes
 

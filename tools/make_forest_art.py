@@ -186,6 +186,15 @@ def main():
                lift=(0.016, 0.048, 0.062), warm=0.04, sat=0.80,
                contrast=1.10, vignette=0.60, grain=2.6, dark=0.76), "frame-set-05.webp")
 
+    # Social card: 1200x630 JPEG. WebP previews are still unreliable on some
+    # platforms (LinkedIn in particular), so og:image gets its own JPEG.
+    og = grade(crop_norm(moss, (0.08, 0.16, 0.92, 0.94)), (1200, 630),
+               lift=(0.018, 0.046, 0.042), warm=0.08, sat=0.86,
+               contrast=1.06, vignette=0.58, grain=2.0, dark=0.92)
+    og_path = os.path.join(IMG, "og.jpg")
+    og.save(og_path, "JPEG", quality=88, optimize=True, progressive=True)
+    print(f"  {'og.jpg':22} 1200x630  {os.path.getsize(og_path)/1024:7.1f} KB")
+
     if "--preview" in sys.argv:
         # a contact sheet so the family can be judged as a set, not one by one
         names = ["forest-hero.webp", "forest-wide-01.webp", "forest-wide-02.webp",
